@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fewo-willrich"
+    }
+  },
+  "defaultProject": "fewo-willrich",
+  "cli": {
+    "analytics": false
+  }
 }
