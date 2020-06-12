@@ -1,1 +1,1 @@
-aws s3 sync ./dist/ s3://fewo-willrich.de/
+aws s3 sync ./dist/fewo-willrich s3://fewo-willrich.de/
