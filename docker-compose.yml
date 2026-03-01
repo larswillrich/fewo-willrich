@@ -1,0 +1,17 @@
+services:
+  fewo-website:
+    image: ghcr.io/larswillrich/fewo-willrich:latest
+    container_name: fewo-website
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.fewo.rule=Host(`svenwillrich.de`) && PathPrefix(`/fewo`)
+      - traefik.http.routers.fewo.entrypoints=websecure
+      - traefik.http.routers.fewo.tls.certresolver=myresolver
+      - traefik.http.services.fewo.loadbalancer.server.port=80
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    external: true
