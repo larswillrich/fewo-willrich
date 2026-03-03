@@ -376,6 +376,56 @@
       box-shadow: 0 12px 28px rgba(44,24,16,0.2);
     }
 
+    /* Nav dropdown */
+    .nav-dropdown-trigger { position: relative; }
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      min-width: 260px;
+      padding-top: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+    .nav-dropdown-trigger:hover .nav-dropdown,
+    .nav-dropdown:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-inner {
+      background: rgba(253,251,247,0.97);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(196,168,130,0.15);
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(44,24,16,0.12);
+      padding: 8px;
+    }
+    .nav-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #2C1810;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .nav-dropdown a:hover {
+      background: rgba(196,168,130,0.12);
+    }
+    .nav-dropdown a::after { display: none; }
+    .nav-dropdown .dd-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
     /* Mobile menu */
     .mobile-menu {
       transform: translateX(100%);
@@ -522,7 +572,37 @@
         <div class="hidden md:flex items-center gap-10">
           <a href="#willkommen" data-i18n="nav.willkommen" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Willkommen</a>
           <a href="#apartments" data-i18n="nav.apartments" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Apartments</a>
-          <a href="#umgebung" data-i18n="nav.umgebung" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Umgebung</a>
+          <div class="nav-dropdown-trigger">
+            <a href="#umgebung" data-i18n="nav.umgebung" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Umgebung</a>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-inner">
+                <a href="/aktivitaeten/freilinger-see.html">
+                  <span class="dd-icon bg-blue-50"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg></span>
+                  <span>Freilinger See</span>
+                </a>
+                <a href="/aktivitaeten/eifelsteig.html">
+                  <span class="dd-icon bg-green-50"><svg class="w-4 h-4 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg></span>
+                  <span data-i18n="actDetail.trail.hero.title">Eifelsteig</span>
+                </a>
+                <a href="/aktivitaeten/burg-blankenheim.html">
+                  <span class="dd-icon bg-amber-50"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg></span>
+                  <span>Burg Blankenheim</span>
+                </a>
+                <a href="/aktivitaeten/nuerburgring.html">
+                  <span class="dd-icon bg-red-50"><svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13h2l2-4h4l2 4h2l2-4h4l1 4"/><circle cx="7" cy="17" r="2" stroke-width="1.5"/><circle cx="17" cy="17" r="2" stroke-width="1.5"/></svg></span>
+                  <span>N&uuml;rburgring</span>
+                </a>
+                <a href="/aktivitaeten/eifel-zoo.html">
+                  <span class="dd-icon bg-emerald-50"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg></span>
+                  <span>Eifel-Zoo</span>
+                </a>
+                <a href="/aktivitaeten/radioteleskop-effelsberg.html">
+                  <span class="dd-icon bg-indigo-50"><svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.789M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></span>
+                  <span>Radioteleskop Effelsberg</span>
+                </a>
+              </div>
+            </div>
+          </div>
           <a href="#preise" data-i18n="nav.preise" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Preise</a>
           <a href="#kontakt" data-i18n="nav.kontakt" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Kontakt</a>
           <button id="langToggle" class="nav-link transition-colors duration-300 text-xl hover:opacity-80 cursor-pointer leading-none" aria-label="Switch language" title="English">&#127468;&#127463;</button>
@@ -1008,64 +1088,70 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Freilinger See -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-1">
+        <a href="/aktivitaeten/freilinger-see.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-1 block">
           <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">Freilinger See</h3>
           <p data-i18n="act.lake.distance" class="text-warm-400 text-sm font-medium mb-2">2 km &middot; 5 Min. mit dem Rad</p>
           <p data-i18n="act.lake.text" class="text-warm-500 text-sm leading-relaxed">Baden, Angeln, Tretbootfahren oder einfach am Ufer entspannen &mdash; unser Haussee.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
 
         <!-- Eifelsteig -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-2">
+        <a href="/aktivitaeten/eifelsteig.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-2 block">
           <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">Eifelsteig</h3>
           <p data-i18n="act.trail.distance" class="text-warm-400 text-sm font-medium mb-2">Direkt am Haus</p>
           <p data-i18n="act.trail.text" class="text-warm-500 text-sm leading-relaxed">313 km Premium-Wanderweg von Aachen nach Trier &mdash; eine Etappe f&uuml;hrt direkt an unserer T&uuml;r vorbei.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
 
         <!-- Burg Blankenheim -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-3">
+        <a href="/aktivitaeten/burg-blankenheim.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-3 block">
           <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">Burg Blankenheim</h3>
           <p data-i18n="act.castle.distance" class="text-warm-400 text-sm font-medium mb-2">5 km &middot; 10 Min. mit dem Auto</p>
           <p data-i18n="act.castle.text" class="text-warm-500 text-sm leading-relaxed">Historische Burg &uuml;ber dem malerischen Ort Blankenheim &mdash; heute eine Jugendherberge mit Panoramablick.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
 
-        <!-- Nürburgring -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-1">
+        <!-- N&uuml;rburgring -->
+        <a href="/aktivitaeten/nuerburgring.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-1 block">
           <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13h2l2-4h4l2 4h2l2-4h4l1 4"/><circle cx="7" cy="17" r="2" stroke-width="1.5"/><circle cx="17" cy="17" r="2" stroke-width="1.5"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">N&uuml;rburgring</h3>
           <p data-i18n="act.ring.distance" class="text-warm-400 text-sm font-medium mb-2">35 km &middot; 30 Min.</p>
           <p data-i18n="act.ring.text" class="text-warm-500 text-sm leading-relaxed">Die legend&auml;re Rennstrecke mit Events, Fahrtrainings und dem Erlebnispark &ldquo;ring&deg;werk&rdquo;.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
 
         <!-- Eifel-Zoo -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-2">
+        <a href="/aktivitaeten/eifel-zoo.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-2 block">
           <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">Eifel-Zoo</h3>
           <p data-i18n="act.zoo.distance" class="text-warm-400 text-sm font-medium mb-2">20 km &middot; 20 Min.</p>
           <p data-i18n="act.zoo.text" class="text-warm-500 text-sm leading-relaxed">Perfekt f&uuml;r Familien: &uuml;ber 400 Tiere aus aller Welt in einem wundersch&ouml;nen Waldgebiet.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
 
         <!-- Radioteleskop Effelsberg -->
-        <div class="glass-card rounded-2xl p-6 reveal reveal-delay-3">
+        <a href="/aktivitaeten/radioteleskop-effelsberg.html" class="glass-card rounded-2xl p-6 reveal reveal-delay-3 block">
           <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.789M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
           </div>
           <h3 class="font-serif text-xl text-warm-800 font-semibold mb-2">Radioteleskop Effelsberg</h3>
           <p data-i18n="act.telescope.distance" class="text-warm-400 text-sm font-medium mb-2">25 km &middot; 25 Min.</p>
           <p data-i18n="act.telescope.text" class="text-warm-500 text-sm leading-relaxed">Eines der gr&ouml;&szlig;ten beweglichen Radioteleskope der Welt &mdash; faszinierend f&uuml;r Gro&szlig; und Klein.</p>
-        </div>
+          <p class="text-warm-400 text-sm mt-3 flex items-center gap-1"><span data-i18n="act.learnMore">Mehr erfahren</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></p>
+        </a>
       </div>
     </div>
   </section>
@@ -1794,109 +1880,8 @@
       });
     })();
 
-    // ---- i18n Language Switching ----
-    function setLanguage(lang) {
-      const t = TRANSLATIONS[lang];
-      if (!t) return;
-
-      // Update html lang attribute
-      document.documentElement.lang = lang;
-
-      // Store preference
-      localStorage.setItem('fewo-lang', lang);
-
-      // Update toggle buttons to show the OTHER language flag
-      // Show the flag of the language you can switch TO
-      const otherFlag = lang === 'de' ? '\uD83C\uDDEC\uD83C\uDDE7' : '\uD83C\uDDE9\uD83C\uDDEA';
-      const otherTitle = lang === 'de' ? 'English' : 'Deutsch';
-      const langToggle = document.getElementById('langToggle');
-      const langToggleMobile = document.getElementById('langToggleMobile');
-      if (langToggle) { langToggle.textContent = otherFlag; langToggle.title = otherTitle; }
-      if (langToggleMobile) { langToggleMobile.textContent = otherFlag; langToggleMobile.title = otherTitle; }
-
-      // Text content
-      document.querySelectorAll('[data-i18n]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n');
-        if (t[key]) el.textContent = t[key];
-      });
-
-      // HTML content (for elements with <br> etc.)
-      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-html');
-        if (t[key]) el.innerHTML = t[key];
-      });
-
-      // Placeholders
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-placeholder');
-        if (t[key]) el.placeholder = t[key];
-      });
-
-      // Alt texts
-      document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-alt');
-        if (t[key]) el.alt = t[key];
-      });
-
-      // Title attributes
-      document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-title');
-        if (t[key]) el.title = t[key];
-      });
-
-      // Aria labels
-      document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-aria');
-        if (t[key]) el.setAttribute('aria-label', t[key]);
-      });
-
-      // Counter suffixes
-      document.querySelectorAll('[data-i18n-suffix]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-suffix');
-        if (t[key]) {
-          el.dataset.suffix = t[key];
-          // Update displayed text if counter already ran
-          var count = el.dataset.count;
-          if (count) el.textContent = count + t[key];
-        }
-      });
-
-      // Meta tags
-      document.title = t['meta.title'] || document.title;
-      var metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc && t['meta.description']) metaDesc.content = t['meta.description'];
-      var ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle && t['meta.ogTitle']) ogTitle.content = t['meta.ogTitle'];
-      var ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc && t['meta.ogDescription']) ogDesc.content = t['meta.ogDescription'];
-    }
-
-    // Initialize language
-    (function() {
-      var savedLang = localStorage.getItem('fewo-lang') || 'de';
-      if (savedLang !== 'de') {
-        setLanguage(savedLang);
-      }
-
-      // Desktop toggle
-      var langToggle = document.getElementById('langToggle');
-      if (langToggle) {
-        langToggle.addEventListener('click', function() {
-          var current = document.documentElement.lang || 'de';
-          setLanguage(current === 'de' ? 'en' : 'de');
-        });
-      }
-
-      // Mobile toggle
-      var langToggleMobile = document.getElementById('langToggleMobile');
-      if (langToggleMobile) {
-        langToggleMobile.addEventListener('click', function() {
-          var current = document.documentElement.lang || 'de';
-          setLanguage(current === 'de' ? 'en' : 'de');
-          document.getElementById('mobileMenu').classList.remove('open');
-        });
-      }
-    })();
+    // ---- i18n Language Switching (functions defined in translations.js) ----
+    initLanguage();
   </script>
 
 </body>
