@@ -180,10 +180,6 @@ const TRANSLATIONS = {
     "sticky.perNight": "/ Nacht",
     "sticky.cta": "Jetzt anfragen",
 
-    // WhatsApp
-    "whatsapp.title": "Schreiben Sie uns auf WhatsApp",
-    "whatsapp.aria": "WhatsApp Kontakt",
-
     // Image alt texts
     "alt.heroFallback": "FeWo Willrich Geb\u00E4ude",
     "alt.heroVideo": "FeWo Willrich Video",
@@ -384,10 +380,6 @@ const TRANSLATIONS = {
     "sticky.price": "From \u20AC70",
     "sticky.perNight": "/ night",
     "sticky.cta": "Inquire now",
-
-    // WhatsApp
-    "whatsapp.title": "Message us on WhatsApp",
-    "whatsapp.aria": "WhatsApp Contact",
 
     // Image alt texts
     "alt.heroFallback": "FeWo Willrich building",
