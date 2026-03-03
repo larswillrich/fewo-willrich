@@ -131,6 +131,13 @@
     .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s ease; }
     .btn-primary:hover::before { left: 100%; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(44,24,16,0.2); }
+    /* Hero image */
+    .hero-img { transition: transform 8s ease; }
+    .hero-img:hover { transform: scale(1.05); }
+    .img-zoom img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    img { opacity: 0; transition: opacity 0.6s ease; }
+    img.loaded, img[src] { opacity: 1; }
   </style>
 </head>
 <body class="bg-warm-50 text-warm-800 font-sans antialiased">
@@ -210,18 +217,23 @@
     </nav>
   </div>
 
-  <!-- HERO -->
-  <section class="relative bg-gradient-to-br from-emerald-600 to-teal-500 py-20 md:py-28 overflow-hidden">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <svg class="w-64 h-64 text-white opacity-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg>
-    </div>
-    <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
-      <div class="mb-8">
-        <svg class="w-24 h-24 text-white/90 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg>
+  <!-- HERO with Background Image -->
+  <section class="relative h-[60vh] min-h-[450px] max-h-[600px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1920&q=80" alt="Tiere im Eifel-Zoo" class="absolute inset-0 w-full h-full object-cover hero-img loaded">
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/70 to-teal-800/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+      <div class="mb-6 reveal">
+        <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto border border-white/20">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg>
+        </div>
       </div>
-      <h1 data-i18n="actDetail.zoo.hero.title" class="font-serif text-5xl md:text-7xl font-semibold mb-6" style="text-shadow: 0 2px 20px rgba(0,0,0,0.2)">Eifel-Zoo</h1>
-      <p data-i18n="actDetail.zoo.hero.tagline" class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-8" style="text-shadow: 0 1px 10px rgba(0,0,0,0.15)">&Uuml;ber 400 Tiere im wundersch&ouml;nen Eifeler Wald</p>
-      <p data-i18n="actDetail.zoo.hero.distance" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium">20 km &middot; ca. 20 Min. mit dem Auto</p>
+      <h1 data-i18n="actDetail.zoo.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 reveal" style="text-shadow: 0 2px 30px rgba(0,0,0,0.35);">Eifel-Zoo</h1>
+      <p data-i18n="actDetail.zoo.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8 reveal" style="text-shadow: 0 1px 10px rgba(0,0,0,0.25);">&Uuml;ber 400 Tiere im wundersch&ouml;nen Eifeler Wald</p>
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 reveal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span data-i18n="actDetail.zoo.hero.distance" class="font-medium">20 km &middot; ca. 20 Min. mit dem Auto</span>
+      </div>
     </div>
   </section>
 
@@ -231,6 +243,15 @@
       <p data-i18n="actDetail.zoo.intro.p1" class="drop-cap text-warm-600 text-lg leading-relaxed mb-6 reveal">Inmitten der gr&uuml;nen W&auml;lder der Eifel liegt einer der charmantesten Tierparks Deutschlands: der Eifel-Zoo in L&uuml;nebach. Auf einem weitl&auml;ufigen, naturbelassenen Gel&auml;nde begegnen Sie &uuml;ber 400 Tieren aus aller Welt &mdash; von heimischen Wildtieren bis zu exotischen Arten wie L&ouml;wen, Kamelen und Affen.</p>
       <p data-i18n="actDetail.zoo.intro.p2" class="text-warm-600 text-lg leading-relaxed mb-6 reveal">Was den Eifel-Zoo besonders macht, ist die einzigartige Verbindung von Tierpark und Natur. Die Gehege sind gro&szlig;z&uuml;gig angelegt und f&uuml;gen sich harmonisch in die Waldlandschaft ein. Kinder lieben den Streichelzoo und den gro&szlig;en Abenteuerspielplatz, w&auml;hrend Erwachsene die entspannte Atmosph&auml;re genie&szlig;en.</p>
       <p data-i18n="actDetail.zoo.intro.p3" class="text-warm-600 text-lg leading-relaxed reveal">Der Zoo ist ein perfektes Ausflugsziel f&uuml;r Familien: gro&szlig; genug f&uuml;r einen erlebnisreichen Tag, aber &uuml;berschaubar genug, damit auch kleine Kinder nicht &uuml;berfordert werden. Packen Sie ein Picknick ein und genie&szlig;en Sie einen unvergesslichen Tag in der Natur.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE IMAGE -->
+  <section class="pb-4 bg-warm-50">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="rounded-2xl overflow-hidden shadow-2xl reveal img-zoom">
+        <img src="https://images.unsplash.com/photo-1503918756811-975bd3397178?w=1200&q=80" alt="Tiere im Zoo" class="w-full h-[350px] md:h-[450px] object-cover loaded">
+      </div>
     </div>
   </section>
 
@@ -280,14 +301,30 @@
 
   <!-- DETAILED DESCRIPTION -->
   <section class="py-20 md:py-28 bg-warm-50">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="mb-16 reveal">
-        <h2 data-i18n="actDetail.zoo.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Tierwelt &amp; Artenvielfalt</h2>
-        <p data-i18n="actDetail.zoo.h1.text" class="text-warm-600 text-lg leading-relaxed">&Uuml;ber 60 verschiedene Tierarten leben im Eifel-Zoo. Von majest&auml;tischen L&ouml;wen und neugierigen Affen &uuml;ber stolze Kamele bis hin zu heimischen Rot- und Damhirschen &mdash; die Vielfalt ist beeindruckend. Besondere Highlights sind die F&uuml;tterungszeiten, bei denen Tierpfleger spannende Geschichten &uuml;ber ihre Sch&uuml;tzlinge erz&auml;hlen. Im Streichelzoo k&ouml;nnen die J&uuml;ngsten Ziegen, Kaninchen und Meerschweinchen hautnah erleben.</p>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 items-start mb-20 reveal">
+        <div class="lg:col-span-3">
+          <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
+          <div class="separator separator-bg-light mb-8"></div>
+          <h2 data-i18n="actDetail.zoo.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Tierwelt &amp; Artenvielfalt</h2>
+          <p data-i18n="actDetail.zoo.h1.text" class="text-warm-600 text-lg leading-relaxed">&Uuml;ber 60 verschiedene Tierarten leben im Eifel-Zoo. Von majest&auml;tischen L&ouml;wen und neugierigen Affen &uuml;ber stolze Kamele bis hin zu heimischen Rot- und Damhirschen &mdash; die Vielfalt ist beeindruckend. Besondere Highlights sind die F&uuml;tterungszeiten, bei denen Tierpfleger spannende Geschichten &uuml;ber ihre Sch&uuml;tzlinge erz&auml;hlen. Im Streichelzoo k&ouml;nnen die J&uuml;ngsten Ziegen, Kaninchen und Meerschweinchen hautnah erleben.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80" alt="Wildtier im Zoo" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
       </div>
-      <div class="reveal">
-        <h2 data-i18n="actDetail.zoo.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Spielplatz &amp; Familienangebote</h2>
-        <p data-i18n="actDetail.zoo.h2.text" class="text-warm-600 text-lg leading-relaxed">Der gro&szlig;e Abenteuerspielplatz l&auml;sst Kinderherzen h&ouml;herschlagen: Kletterger&uuml;ste, Rutschen und Schaukeln sorgen f&uuml;r stundenlangen Spa&szlig;. Mehrere Picknickbereiche laden zum Verweilen ein, und ein Kiosk bietet Snacks und Getr&auml;nke. Der Zoo veranstaltet regelm&auml;&szlig;ig Thementage und saisonale Events, die den Besuch noch abwechslungsreicher machen.</p>
+      <div class="grid lg:grid-cols-5 gap-12 items-start reveal">
+        <div class="lg:col-span-2 order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1535572290543-960a8046f5af?w=800&q=80" alt="Spielplatz im Gr&uuml;nen" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
+        <div class="lg:col-span-3 order-1 lg:order-2">
+          <h2 data-i18n="actDetail.zoo.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Spielplatz &amp; Familienangebote</h2>
+          <p data-i18n="actDetail.zoo.h2.text" class="text-warm-600 text-lg leading-relaxed">Der gro&szlig;e Abenteuerspielplatz l&auml;sst Kinderherzen h&ouml;herschlagen: Kletterger&uuml;ste, Rutschen und Schaukeln sorgen f&uuml;r stundenlangen Spa&szlig;. Mehrere Picknicbereiche laden zum Verweilen ein, und ein Kiosk bietet Snacks und Getr&auml;nke. Der Zoo veranstaltet regelm&auml;&szlig;ig Thementage und saisonale Events, die den Besuch noch abwechslungsreicher machen.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -343,8 +380,10 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 md:py-28 bg-gradient-to-br from-emerald-600 to-teal-500">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=1920&q=80" alt="" class="absolute inset-0 w-full h-full object-cover loaded" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/85 to-teal-800/80"></div>
+    <div class="relative max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
       <h2 data-i18n="actDetail.ctaTitle" class="font-serif text-3xl md:text-4xl text-white font-semibold mb-4">Nach einem erlebnisreichen Tag...</h2>
       <p data-i18n="actDetail.ctaText" class="text-white/80 text-lg mb-8 max-w-xl mx-auto">...entspannen Sie in unseren gem&uuml;tlichen Ferienwohnungen in Blankenheim-Reetz. Nur wenige Minuten von den besten Ausflugszielen der Eifel entfernt.</p>
       <a href="/#kontakt" class="btn-primary inline-flex items-center gap-3 bg-white text-warm-800 px-10 py-4 rounded-xl font-medium hover:bg-warm-100 transition-colors duration-300 shadow-lg text-lg">

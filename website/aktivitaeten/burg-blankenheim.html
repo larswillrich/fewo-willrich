@@ -136,6 +136,13 @@
     ::-webkit-scrollbar-track { background: #F5F0EB; }
     ::-webkit-scrollbar-thumb { background: #C4A882; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #8B7355; }
+    /* Hero image */
+    .hero-img { transition: transform 8s ease; }
+    .hero-img:hover { transform: scale(1.05); }
+    .img-zoom img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    img { opacity: 0; transition: opacity 0.6s ease; }
+    img.loaded, img[src] { opacity: 1; }
   </style>
 </head>
 <body class="bg-warm-50 text-warm-800 font-sans antialiased">
@@ -214,17 +221,22 @@
     </nav>
   </div>
 
-  <!-- HERO -->
-  <section class="relative bg-gradient-to-br from-amber-600 to-yellow-500 py-20 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 flex items-center justify-center text-white">
-      <svg class="w-64 h-64 opacity-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg>
-    </div>
-    <div class="relative max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
-      <div class="reveal">
-        <p data-i18n="actDetail.castle.hero.distance" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium mb-6">5 km &middot; 10 Min. mit dem Auto</p>
-        <svg class="w-24 h-24 text-white/90 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg>
-        <h1 data-i18n="actDetail.castle.hero.title" class="font-serif text-5xl md:text-7xl font-semibold mb-6" style="text-shadow: 0 2px 20px rgba(0,0,0,0.2)">Burg Blankenheim</h1>
-        <p data-i18n="actDetail.castle.hero.tagline" class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto" style="text-shadow: 0 1px 10px rgba(0,0,0,0.15)">900 Jahre Geschichte, 5 Minuten entfernt</p>
+  <!-- HERO with Background Image -->
+  <section class="relative h-[60vh] min-h-[450px] max-h-[600px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?w=1920&q=80" alt="Historische Burg in der Eifel" class="absolute inset-0 w-full h-full object-cover hero-img loaded">
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-900/70 to-yellow-800/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+      <div class="mb-6 reveal">
+        <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto border border-white/20">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg>
+        </div>
+      </div>
+      <h1 data-i18n="actDetail.castle.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 reveal" style="text-shadow: 0 2px 30px rgba(0,0,0,0.35);">Burg Blankenheim</h1>
+      <p data-i18n="actDetail.castle.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8 reveal" style="text-shadow: 0 1px 10px rgba(0,0,0,0.25);">900 Jahre Geschichte, 5 Minuten entfernt</p>
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 reveal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span data-i18n="actDetail.castle.hero.distance" class="font-medium">5 km &middot; 10 Min. mit dem Auto</span>
       </div>
     </div>
   </section>
@@ -235,6 +247,15 @@
       <p data-i18n="actDetail.castle.intro.p1" class="drop-cap text-warm-600 text-lg leading-relaxed mb-6 reveal">Hoch &uuml;ber dem malerischen Fachwerkst&auml;dtchen Blankenheim thront seit &uuml;ber 900 Jahren die imposante Burg Blankenheim. Schon von weitem sichtbar, ist sie das Wahrzeichen der Region und ein Zeugnis mittelalterlicher Baukunst. Von unseren Ferienwohnungen erreichen Sie dieses historische Juwel in nur zehn Minuten mit dem Auto.</p>
       <p data-i18n="actDetail.castle.intro.p2" class="text-warm-600 text-lg leading-relaxed mb-6 reveal">Die Burg, die heute als Jugendherberge genutzt wird, bietet einen der sch&ouml;nsten Panoramablicke der Eifel. Von der Burgmauer aus schweift der Blick &uuml;ber das Ahrtal, die Fachwerkg&auml;sschen des Ortes und die weiten H&uuml;gellandschaften der Kalkeifel. Besonders bei Sonnenuntergang ist der Anblick unvergesslich.</p>
       <p data-i18n="actDetail.castle.intro.p3" class="text-warm-600 text-lg leading-relaxed reveal">Doch Blankenheim hat weit mehr zu bieten als seine Burg. Im Ort selbst entspringt die Ahr &mdash; in einem Keller eines historischen Fachwerkhauses befindet sich die Ahrquelle, eine der ungew&ouml;hnlichsten Flussquellen Deutschlands.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE IMAGE -->
+  <section class="pb-4 bg-warm-50">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="rounded-2xl overflow-hidden shadow-2xl reveal img-zoom">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80" alt="Blankenheim Altstadt" class="w-full h-[350px] md:h-[450px] object-cover loaded">
+      </div>
     </div>
   </section>
 
@@ -284,14 +305,30 @@
 
   <!-- DETAILED DESCRIPTION -->
   <section class="py-20 md:py-28 bg-warm-50">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="mb-16 reveal">
-        <h2 data-i18n="actDetail.castle.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Geschichte zum Anfassen</h2>
-        <p data-i18n="actDetail.castle.h1.text" class="text-warm-600 text-lg leading-relaxed">Die Burg wurde im 12. Jahrhundert von den Herren von Blankenheim erbaut und &uuml;ber die Jahrhunderte stetig erweitert. Heute beherbergt sie eine der sch&ouml;nsten Jugendherbergen Deutschlands. Der Innenhof, die alten Gew&ouml;lbe und die m&auml;chtigen Mauern vermitteln ein lebendiges Bild des Mittelalters. Regelm&auml;&szlig;ig finden Burgf&uuml;hrungen statt, die die spannende Geschichte des Bauwerks erz&auml;hlen.</p>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 items-start mb-20 reveal">
+        <div class="lg:col-span-3">
+          <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
+          <div class="separator separator-bg-light mb-8"></div>
+          <h2 data-i18n="actDetail.castle.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Geschichte zum Anfassen</h2>
+          <p data-i18n="actDetail.castle.h1.text" class="text-warm-600 text-lg leading-relaxed">Die Burg wurde im 12. Jahrhundert von den Herren von Blankenheim erbaut und &uuml;ber die Jahrhunderte stetig erweitert. Heute beherbergt sie eine der sch&ouml;nsten Jugendherbergen Deutschlands. Der Innenhof, die alten Gew&ouml;lbe und die m&auml;chtigen Mauern vermitteln ein lebendiges Bild des Mittelalters. Regelm&auml;&szlig;ig finden Burgf&uuml;hrungen statt, die die spannende Geschichte des Bauwerks erz&auml;hlen.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?w=800&q=80" alt="Historische Burgmauern" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
       </div>
-      <div class="reveal">
-        <h2 data-i18n="actDetail.castle.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Das Fachwerkst&auml;dtchen Blankenheim</h2>
-        <p data-i18n="actDetail.castle.h2.text" class="text-warm-600 text-lg leading-relaxed">Unterhalb der Burg erstreckt sich der historische Ortskern von Blankenheim mit seinen liebevoll restaurierten Fachwerkh&auml;usern, gem&uuml;tlichen Cafes und kleinen Gesch&auml;ften. Besonders sehenswert ist die Ahrquelle im Keller eines Fachwerkhauses, der Tiergartentunnel und die r&ouml;mische Wasserleitung, die an das antike Erbe der Region erinnert. Ein Bummel durch die Gassen ist wie eine Zeitreise.</p>
+      <div class="grid lg:grid-cols-5 gap-12 items-start reveal">
+        <div class="lg:col-span-2 order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&q=80" alt="Fachwerkh&auml;user" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
+        <div class="lg:col-span-3 order-1 lg:order-2">
+          <h2 data-i18n="actDetail.castle.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Das Fachwerkst&auml;dtchen Blankenheim</h2>
+          <p data-i18n="actDetail.castle.h2.text" class="text-warm-600 text-lg leading-relaxed">Unterhalb der Burg erstreckt sich der historische Ortskern von Blankenheim mit seinen liebevoll restaurierten Fachwerkhausern, gem&uuml;tlichen Cafes und kleinen Gesch&auml;ften. Besonders sehenswert ist die Ahrquelle im Keller eines Fachwerkhauses, der Tiergartentunnel und die r&ouml;mische Wasserleitung, die an das antike Erbe der Region erinnert. Ein Bummel durch die Gassen ist wie eine Zeitreise.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -338,8 +375,10 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 md:py-28 bg-warm-800">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?w=1920&q=80" alt="" class="absolute inset-0 w-full h-full object-cover loaded" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-900/85 to-yellow-800/80"></div>
+    <div class="relative max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
       <h2 data-i18n="actDetail.ctaTitle" class="font-serif text-3xl md:text-4xl text-white font-semibold mb-4">Nach einem erlebnisreichen Tag...</h2>
       <p data-i18n="actDetail.ctaText" class="text-warm-400 text-lg mb-8 max-w-xl mx-auto">...entspannen Sie in unseren gem&uuml;tlichen Ferienwohnungen in Blankenheim-Reetz. Nur wenige Minuten von den besten Ausflugszielen der Eifel entfernt.</p>
       <a href="/#kontakt" class="btn-primary inline-flex items-center gap-3 bg-warm-100 text-warm-800 px-10 py-4 rounded-xl font-medium hover:bg-white transition-colors duration-300 shadow-lg text-lg">

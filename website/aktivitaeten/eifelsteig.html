@@ -178,6 +178,13 @@
     }
     .btn-primary:hover::before { left: 100%; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(44,24,16,0.2); }
+    /* Hero image */
+    .hero-img { transition: transform 8s ease; }
+    .hero-img:hover { transform: scale(1.05); }
+    .img-zoom img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    img { opacity: 0; transition: opacity 0.6s ease; }
+    img.loaded, img[src] { opacity: 1; }
   </style>
 </head>
 <body class="bg-warm-50 text-warm-800 font-sans antialiased">
@@ -262,19 +269,20 @@
     </div>
   </div>
 
-  <!-- HERO with gradient -->
-  <section class="relative py-20 md:py-28 bg-gradient-to-br from-green-700 to-emerald-500 overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <svg class="absolute top-10 right-10 w-64 h-64 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg>
-      <svg class="absolute bottom-10 left-10 w-48 h-48 text-white/10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
-      <div class="mb-8">
-        <svg class="w-24 h-24 text-white/90 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg>
+  <!-- HERO with Background Image -->
+  <section class="relative h-[60vh] min-h-[450px] max-h-[600px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80" alt="Eifelsteig Wanderweg durch den Wald" class="absolute inset-0 w-full h-full object-cover hero-img loaded">
+    <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-emerald-800/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+      <div class="mb-6 reveal">
+        <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto border border-white/20">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg>
+        </div>
       </div>
-      <h1 data-i18n="actDetail.trail.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-6">Eifelsteig</h1>
-      <p data-i18n="actDetail.trail.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8">313 km Premium-Wanderweg direkt am Haus</p>
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
+      <h1 data-i18n="actDetail.trail.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 reveal" style="text-shadow: 0 2px 30px rgba(0,0,0,0.35);">Eifelsteig</h1>
+      <p data-i18n="actDetail.trail.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8 reveal" style="text-shadow: 0 1px 10px rgba(0,0,0,0.25);">313 km Premium-Wanderweg direkt am Haus</p>
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 reveal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <span data-i18n="actDetail.trail.hero.distance" class="font-medium">Direkt ab unserer Haust&uuml;r</span>
       </div>
@@ -287,6 +295,15 @@
       <p data-i18n="actDetail.trail.intro.p1" class="text-warm-600 text-lg leading-relaxed mb-6 drop-cap">Stellen Sie sich vor, Sie &ouml;ffnen morgens die T&uuml;r Ihrer Ferienwohnung und stehen direkt auf einem der sch&ouml;nsten Fernwanderwege Deutschlands. Genau das bieten wir Ihnen: Der Eifelsteig, ausgezeichnet als Premium-Wanderweg vom Deutschen Wanderverband, f&uuml;hrt unmittelbar an unserem Haus in Blankenheim-Reetz vorbei.</p>
       <p data-i18n="actDetail.trail.intro.p2" class="text-warm-600 text-lg leading-relaxed mb-6">Auf insgesamt 313 Kilometern verbindet der Eifelsteig Aachen mit Trier und durchquert dabei die abwechslungsreichsten Landschaften der Eifel: tiefe Bacht&auml;ler, vulkanische Maare, ausgedehnte Hochfl&auml;chen und dichte Buchw&auml;lder. Die Etappe durch Blankenheim-Reetz geh&ouml;rt zu den landschaftlich reizvollsten Abschnitten.</p>
       <p data-i18n="actDetail.trail.intro.p3" class="text-warm-600 text-lg leading-relaxed">Ob Sie eine einzelne Tagesetappe wandern oder mehrere Tage am St&uuml;ck unterwegs sein m&ouml;chten &mdash; unsere Ferienwohnungen sind der ideale Ausgangspunkt. Nach einem erlebnisreichen Wandertag erwartet Sie ein gem&uuml;tliches Zuhause mit allem Komfort.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE IMAGE -->
+  <section class="pb-4 bg-warm-50">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="rounded-2xl overflow-hidden shadow-2xl reveal img-zoom">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80" alt="Wanderer auf dem Eifelsteig" class="w-full h-[350px] md:h-[450px] object-cover loaded">
+      </div>
     </div>
   </section>
 
@@ -336,16 +353,30 @@
 
   <!-- DETAILED DESCRIPTION -->
   <section class="py-20 md:py-28 bg-warm-50">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="mb-16 reveal">
-        <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
-        <div class="separator separator-bg-light mb-8"></div>
-        <h2 data-i18n="actDetail.trail.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Die Etappen rund um Blankenheim</h2>
-        <p data-i18n="actDetail.trail.h1.text" class="text-warm-600 text-lg leading-relaxed">Die Etappe von Blankenheim nach Mirbach (ca. 22 km) f&uuml;hrt durch das wildromantische Lampertstal &mdash; eines der sch&ouml;nsten Trockent&auml;ler der Eifel mit seltenen Orchideenwiesen. In die andere Richtung geht es nach Hillesheim (ca. 25 km) durch W&auml;lder und vorbei an den Quellen der Ahr. Beide Etappen bieten spektakul&auml;re Aussichten und abwechslungsreiche Wege.</p>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 items-start mb-20 reveal">
+        <div class="lg:col-span-3">
+          <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
+          <div class="separator separator-bg-light mb-8"></div>
+          <h2 data-i18n="actDetail.trail.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Die Etappen rund um Blankenheim</h2>
+          <p data-i18n="actDetail.trail.h1.text" class="text-warm-600 text-lg leading-relaxed">Die Etappe von Blankenheim nach Mirbach (ca. 22 km) f&uuml;hrt durch das wildromantische Lampertstal &mdash; eines der sch&ouml;nsten Trockent&auml;ler der Eifel mit seltenen Orchideenwiesen. In die andere Richtung geht es nach Hillesheim (ca. 25 km) durch W&auml;lder und vorbei an den Quellen der Ahr. Beide Etappen bieten spektakul&auml;re Aussichten und abwechslungsreiche Wege.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=800&q=80" alt="Wanderweg durch die Eifel" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
       </div>
-      <div class="reveal">
-        <h2 data-i18n="actDetail.trail.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Weitere Wanderwege in der Region</h2>
-        <p data-i18n="actDetail.trail.h2.text" class="text-warm-600 text-lg leading-relaxed">Neben dem Eifelsteig gibt es zahlreiche k&uuml;rzere Rundwanderwege direkt ab unserer T&uuml;r: Die Freilinger-See-Runde (4,3 km), der Blankenheimer Panoramaweg (12 km) und der Ahrtalweg. Auch die Eifel-Traumpfade und EifelSchleifen sind gut erreichbar. F&uuml;r jeden Fitnesslevel und jede Zeitplanung gibt es die passende Route.</p>
+      <div class="grid lg:grid-cols-5 gap-12 items-start reveal">
+        <div class="lg:col-span-2 order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Panoramablick Eifel" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
+        <div class="lg:col-span-3 order-1 lg:order-2">
+          <h2 data-i18n="actDetail.trail.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Weitere Wanderwege in der Region</h2>
+          <p data-i18n="actDetail.trail.h2.text" class="text-warm-600 text-lg leading-relaxed">Neben dem Eifelsteig gibt es zahlreiche k&uuml;rzere Rundwanderwege direkt ab unserer T&uuml;r: Die Freilinger-See-Runde (4,3 km), der Blankenheimer Panoramaweg (12 km) und der Ahrtalweg. Auch die Eifel-Traumpfade und EifelSchleifen sind gut erreichbar. F&uuml;r jeden Fitnesslevel und jede Zeitplanung gibt es die passende Route.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -438,8 +469,10 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 md:py-28 bg-gradient-to-br from-green-700 to-emerald-500">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80" alt="" class="absolute inset-0 w-full h-full object-cover loaded" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-green-900/85 to-emerald-800/80"></div>
+    <div class="relative max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
       <h2 data-i18n="actDetail.ctaTitle" class="font-serif text-3xl md:text-4xl font-semibold mb-6">Nach einem erlebnisreichen Tag...</h2>
       <p data-i18n="actDetail.ctaText" class="text-white/90 text-lg leading-relaxed mb-10">...entspannen Sie in unseren gem&uuml;tlichen Ferienwohnungen in Blankenheim-Reetz. Nur wenige Minuten von den besten Ausflugszielen der Eifel entfernt.</p>
       <a href="/#kontakt" data-i18n="actDetail.ctaButton" class="btn-primary inline-block bg-white text-warm-800 px-10 py-4 rounded-xl font-semibold text-lg hover:bg-warm-100 transition-colors">Verf&uuml;gbarkeit anfragen</a>

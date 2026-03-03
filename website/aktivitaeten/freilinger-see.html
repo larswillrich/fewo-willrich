@@ -178,6 +178,13 @@
     }
     .btn-primary:hover::before { left: 100%; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(44,24,16,0.2); }
+    /* Hero image */
+    .hero-img { transition: transform 8s ease; }
+    .hero-img:hover { transform: scale(1.05); }
+    .img-zoom img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    img { opacity: 0; transition: opacity 0.6s ease; }
+    img.loaded, img[src] { opacity: 1; }
   </style>
 </head>
 <body class="bg-warm-50 text-warm-800 font-sans antialiased">
@@ -262,19 +269,20 @@
     </div>
   </div>
 
-  <!-- HERO with gradient -->
-  <section class="relative py-20 md:py-28 bg-gradient-to-br from-blue-600 to-cyan-500 overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <svg class="absolute top-10 right-10 w-64 h-64 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg>
-      <svg class="absolute bottom-10 left-10 w-48 h-48 text-white/10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
-      <div class="mb-8">
-        <svg class="w-24 h-24 text-white/90 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg>
+  <!-- HERO with Background Image -->
+  <section class="relative h-[60vh] min-h-[450px] max-h-[600px] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80" alt="Freilinger See Landschaft" class="absolute inset-0 w-full h-full object-cover hero-img loaded">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-cyan-800/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+      <div class="mb-6 reveal">
+        <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto border border-white/20">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg>
+        </div>
       </div>
-      <h1 data-i18n="actDetail.lake.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-6">Freilinger See</h1>
-      <p data-i18n="actDetail.lake.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8">Ihr Badesee in nur 5 Radminuten</p>
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
+      <h1 data-i18n="actDetail.lake.hero.title" class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 reveal" style="text-shadow: 0 2px 30px rgba(0,0,0,0.35);">Freilinger See</h1>
+      <p data-i18n="actDetail.lake.hero.tagline" class="text-xl md:text-2xl text-white/90 font-light mb-8 reveal" style="text-shadow: 0 1px 10px rgba(0,0,0,0.25);">Ihr Badesee in nur 5 Radminuten</p>
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 reveal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <span data-i18n="actDetail.lake.hero.distance" class="font-medium">2 km von unseren Ferienwohnungen</span>
       </div>
@@ -287,6 +295,15 @@
       <p data-i18n="actDetail.lake.intro.p1" class="text-warm-600 text-lg leading-relaxed mb-6 drop-cap">Der Freilinger See ist das Herzst&uuml;ck unserer Nachbarschaft und ein wahres Naturjuwel der Eifel. Eingebettet in sanfte H&uuml;gel und umgeben von dichten W&auml;ldern, bietet dieser idyllische Stausee alles, was das Urlauberherz begehrt. Mit dem Fahrrad sind Sie in nur f&uuml;nf Minuten am Ufer &mdash; oder Sie genie&szlig;en einen gem&uuml;tlichen Spaziergang durch Wiesen und Felder.</p>
       <p data-i18n="actDetail.lake.intro.p2" class="text-warm-600 text-lg leading-relaxed mb-6">Im Sommer l&auml;dt der See mit seinem klaren Wasser zum Baden und Schwimmen ein. Eine offizielle Badestelle mit Liegewiese macht den Freilinger See zum perfekten Ziel f&uuml;r hei&szlig;e Sommertage. Kinder plantschen im flachen Uferbereich, w&auml;hrend Erwachsene die Ruhe und die Natur genie&szlig;en.</p>
       <p data-i18n="actDetail.lake.intro.p3" class="text-warm-600 text-lg leading-relaxed">Der 4,3 km lange Rundwanderweg um den See ist ein Erlebnis f&uuml;r die ganze Familie. &Uuml;ber Stege, durch Wiesenlandschaften und entlang bewaldeter Ufer f&uuml;hrt der Weg und bietet immer wieder atemberaubende Ausblicke auf die Wasserfl&auml;che.</p>
+    </div>
+  </section>
+
+  <!-- FEATURE IMAGE -->
+  <section class="pb-4 bg-warm-50">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="rounded-2xl overflow-hidden shadow-2xl reveal img-zoom">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Freilinger See Panorama" class="w-full h-[350px] md:h-[450px] object-cover loaded">
+      </div>
     </div>
   </section>
 
@@ -336,16 +353,30 @@
 
   <!-- DETAILED DESCRIPTION -->
   <section class="py-20 md:py-28 bg-warm-50">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="mb-16 reveal">
-        <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
-        <div class="separator separator-bg-light mb-8"></div>
-        <h2 data-i18n="actDetail.lake.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Baden, Angeln &amp; Wassersport</h2>
-        <p data-i18n="actDetail.lake.h1.text" class="text-warm-600 text-lg leading-relaxed">Der Freilinger See ist einer der wenigen Eifelseen, an denen das Baden offiziell erlaubt und sogar erw&uuml;nscht ist. Die Wasserqualit&auml;t wird regelm&auml;&szlig;ig &uuml;berpr&uuml;ft und ist hervorragend. F&uuml;r Angler ist der See ein Paradies: Hechte, Barsche und Karpfen warten auf den richtigen K&ouml;der. Angelscheine k&ouml;nnen vor Ort erworben werden. Tretboote stehen ebenfalls zum Verleih bereit &mdash; die perfekte Art, den See vom Wasser aus zu erkunden.</p>
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 items-start mb-20 reveal">
+        <div class="lg:col-span-3">
+          <p data-i18n="actDetail.description" class="section-label text-warm-400 text-sm tracking-widest-custom uppercase mb-4 font-medium">Im Detail</p>
+          <div class="separator separator-bg-light mb-8"></div>
+          <h2 data-i18n="actDetail.lake.h1.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Baden, Angeln &amp; Wassersport</h2>
+          <p data-i18n="actDetail.lake.h1.text" class="text-warm-600 text-lg leading-relaxed">Der Freilinger See ist einer der wenigen Eifelseen, an denen das Baden offiziell erlaubt und sogar erw&uuml;nscht ist. Die Wasserqualit&auml;t wird regelm&auml;&szlig;ig &uuml;berpr&uuml;ft und ist hervorragend. F&uuml;r Angler ist der See ein Paradies: Hechte, Barsche und Karpfen warten auf den richtigen K&ouml;der. Angelscheine k&ouml;nnen vor Ort erworben werden. Tretboote stehen ebenfalls zum Verleih bereit &mdash; die perfekte Art, den See vom Wasser aus zu erkunden.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80" alt="Sonnenuntergang am See" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
       </div>
-      <div class="reveal">
-        <h2 data-i18n="actDetail.lake.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Rundwanderweg &amp; Naturerlebnis</h2>
-        <p data-i18n="actDetail.lake.h2.text" class="text-warm-600 text-lg leading-relaxed">Der ausgeschilderte Rundwanderweg (4,3 km) f&uuml;hrt Sie einmal komplett um den See. Unterwegs passieren Sie Holzstege, Aussichtspunkte und ruhige Waldbereiche. Im Fr&uuml;hling bl&uuml;hen am Ufer wilde Blumen, im Herbst f&auml;rben sich die umliegenden W&auml;lder in spektakul&auml;re Rot- und Goldfarben. Auch im Winter hat der See seinen Reiz &mdash; wenn Nebelschwaden &uuml;ber das Wasser ziehen, entsteht eine geradezu magische Atmosph&auml;re.</p>
+      <div class="grid lg:grid-cols-5 gap-12 items-start reveal">
+        <div class="lg:col-span-2 order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden shadow-xl img-zoom">
+            <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=800&q=80" alt="Wanderweg am See" class="w-full h-[300px] lg:h-[380px] object-cover loaded">
+          </div>
+        </div>
+        <div class="lg:col-span-3 order-1 lg:order-2">
+          <h2 data-i18n="actDetail.lake.h2.title" class="font-serif text-3xl md:text-4xl text-warm-800 font-semibold mb-6">Rundwanderweg &amp; Naturerlebnis</h2>
+          <p data-i18n="actDetail.lake.h2.text" class="text-warm-600 text-lg leading-relaxed">Der ausgeschilderte Rundwanderweg (4,3 km) f&uuml;hrt Sie einmal komplett um den See. Unterwegs passieren Sie Holzstege, Aussichtspunkte und ruhige Waldbereiche. Im Fr&uuml;hling bl&uuml;hen am Ufer wilde Blumen, im Herbst f&auml;rben sich die umliegenden W&auml;lder in spektakul&auml;re Rot- und Goldfarben. Auch im Winter hat der See seinen Reiz &mdash; wenn Nebelschwaden &uuml;ber das Wasser ziehen, entsteht eine geradezu magische Atmosph&auml;re.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -428,8 +459,10 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 md:py-28 bg-gradient-to-br from-blue-600 to-cyan-500">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80" alt="" class="absolute inset-0 w-full h-full object-cover loaded" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/85 to-cyan-800/80"></div>
+    <div class="relative max-w-3xl mx-auto px-6 lg:px-8 text-center text-white">
       <h2 data-i18n="actDetail.ctaTitle" class="font-serif text-3xl md:text-4xl font-semibold mb-6">Nach einem erlebnisreichen Tag...</h2>
       <p data-i18n="actDetail.ctaText" class="text-white/90 text-lg leading-relaxed mb-10">...entspannen Sie in unseren gem&uuml;tlichen Ferienwohnungen in Blankenheim-Reetz. Nur wenige Minuten von den besten Ausflugszielen der Eifel entfernt.</p>
       <a href="/#kontakt" data-i18n="actDetail.ctaButton" class="btn-primary inline-block bg-white text-warm-800 px-10 py-4 rounded-xl font-semibold text-lg hover:bg-warm-100 transition-colors">Verf&uuml;gbarkeit anfragen</a>
