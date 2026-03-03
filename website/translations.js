@@ -126,6 +126,8 @@ const TRANSLATIONS = {
     "reviews.label": "Bewertungen",
     "reviews.title": "Was unsere G\u00E4ste sagen",
     "reviews.onGoogle": "auf Google",
+    "reviews.ctaText": "Waren Sie schon bei uns? Wir freuen uns \u00FCber Ihre Bewertung!",
+    "reviews.cta": "Bewertung auf Google schreiben",
 
     // Pricing
     "pricing.label": "Preise",
@@ -152,6 +154,7 @@ const TRANSLATIONS = {
     "contact.email": "E-Mail",
     "contact.phone": "Telefon",
     "contact.address": "Adresse",
+    "contact.openMaps": "In Google Maps \u00F6ffnen",
     "contact.nameLabel": "Name",
     "contact.namePlaceholder": "Ihr Name",
     "contact.emailLabel": "E-Mail",
@@ -327,6 +330,8 @@ const TRANSLATIONS = {
     "reviews.label": "Reviews",
     "reviews.title": "What Our Guests Say",
     "reviews.onGoogle": "on Google",
+    "reviews.ctaText": "Have you stayed with us? We'd love to hear your feedback!",
+    "reviews.cta": "Write a Review on Google",
 
     // Pricing
     "pricing.label": "Prices",
@@ -353,6 +358,7 @@ const TRANSLATIONS = {
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.address": "Address",
+    "contact.openMaps": "Open in Google Maps",
     "contact.nameLabel": "Name",
     "contact.namePlaceholder": "Your name",
     "contact.emailLabel": "Email",
