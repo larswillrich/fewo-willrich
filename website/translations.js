@@ -405,7 +405,131 @@ const TRANSLATIONS = {
     "actDetail.telescope.perfectFor.1": "Wissenschaftsfans",
     "actDetail.telescope.perfectFor.2": "Familien",
     "actDetail.telescope.perfectFor.3": "Naturliebhaber",
-    "actDetail.telescope.perfectFor.4": "Neugierige"
+    "actDetail.telescope.perfectFor.4": "Neugierige",
+
+    // ===== LEGAL PAGES (DE) =====
+
+    // Privacy policy breadcrumb & footer links
+    "legal.privacy.breadcrumb": "Datenschutz",
+    "legal.impressum.breadcrumb": "Impressum",
+
+    // Impressum page
+    "legal.impressum.title": "Impressum",
+    "legal.impressum.section1.title": "Angaben gem\u00E4\u00DF \u00A7 5 DDG",
+    "legal.impressum.section1.country": "Deutschland",
+    "legal.impressum.section2.title": "Kontakt",
+    "legal.impressum.section2.phone": "Telefon:",
+    "legal.impressum.section2.email": "E-Mail:",
+    "legal.impressum.section3.title": "Umsatzsteuer-ID",
+    "legal.impressum.section3.text": "Umsatzsteuer-Identifikationsnummer gem\u00E4\u00DF \u00A7 27 a Umsatzsteuergesetz:",
+    "legal.impressum.section3.placeholder": "[wird erg\u00E4nzt]",
+    "legal.impressum.section4.title": "Verantwortlich f\u00FCr den Inhalt nach \u00A7 18 Abs. 2 MStV",
+    "legal.impressum.section5.title": "EU-Streitschlichtung",
+    "legal.impressum.section5.text1": "Die Europ\u00E4ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
+    "legal.impressum.section5.text2": "Unsere E-Mail-Adresse finden Sie oben im Impressum.",
+    "legal.impressum.section5.text3": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "legal.impressum.section6.title": "Haftung f\u00FCr Inhalte",
+    "legal.impressum.section6.text1": "Als Diensteanbieter sind wir gem\u00E4\u00DF \u00A7 7 Abs.1 TMG f\u00FCr eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach \u00A7\u00A7 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, \u00FCbermittelte oder gespeicherte fremde Informationen zu \u00FCberwachen oder nach Umst\u00E4nden zu forschen, die auf eine rechtswidrige T\u00E4tigkeit hinweisen.",
+    "legal.impressum.section6.text2": "Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber\u00FChrt. Eine diesbez\u00FCgliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m\u00F6glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
+    "legal.impressum.section7.title": "Haftung f\u00FCr Links",
+    "legal.impressum.section7.text1": "Unser Angebot enth\u00E4lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k\u00F6nnen wir f\u00FCr diese fremden Inhalte auch keine Gew\u00E4hr \u00FCbernehmen. F\u00FCr die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "legal.impressum.section7.text2": "Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m\u00F6gliche Rechtsverst\u00F6\u00DFe \u00FCberpr\u00FCft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.",
+    "legal.impressum.section8.title": "Urheberrecht",
+    "legal.impressum.section8.text1": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf\u00E4ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au\u00DFerhalb der Grenzen des Urheberrechtes bed\u00FCrfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f\u00FCr den privaten, nicht kommerziellen Gebrauch gestattet.",
+    "legal.impressum.section8.text2": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
+    "legal.impressum.section8.credits": "Bildnachweise: Bilder von Unsplash (unsplash.com) unter der Unsplash-Lizenz verwendet.",
+
+    // Privacy policy page
+    "legal.privacy.title": "Datenschutzerkl\u00E4rung",
+
+    // Section 1
+    "legal.privacy.s1.title": "1. Datenschutz auf einen Blick",
+    "legal.privacy.s1.general.title": "Allgemeine Hinweise",
+    "legal.privacy.s1.general.text": "Die folgenden Hinweise geben einen einfachen \u00DCberblick dar\u00FCber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers\u00F6nlich identifiziert werden k\u00F6nnen. Ausf\u00FChrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef\u00FChrten Datenschutzerkl\u00E4rung.",
+    "legal.privacy.s1.collection.title": "Datenerfassung auf dieser Website",
+    "legal.privacy.s1.collection.who": "Wer ist verantwortlich f\u00FCr die Datenerfassung auf dieser Website?\nDie Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiberin: Eva-Maria Mauer Willrich, Hardtstra\u00DFe 11/13, 53945 Blankenheim-Reetz.",
+    "legal.privacy.s1.collection.how": "Wie erfassen wir Ihre Daten?\nIhre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, z.\u2009B. durch eine Anfrage per E-Mail oder Telefon. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.\u2009B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).",
+
+    // Section 2
+    "legal.privacy.s2.title": "2. Verantwortliche Stelle",
+    "legal.privacy.s2.text": "Verantwortliche Stelle ist die nat\u00FCrliche Person, die allein oder gemeinsam mit anderen \u00FCber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.\u2009B. Namen, E-Mail-Adressen o.\u2009\u00C4.) entscheidet.",
+
+    // Section 3
+    "legal.privacy.s3.title": "3. Allgemeine Hinweise und Pflichtinformationen",
+    "legal.privacy.s3.datenschutz.title": "Datenschutz",
+    "legal.privacy.s3.datenschutz.text": "Die Betreiberin dieser Seiten nimmt den Schutz Ihrer pers\u00F6nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl\u00E4rung. Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Die vorliegende Datenschutzerkl\u00E4rung erl\u00E4utert, welche Daten wir erheben und wof\u00FCr wir sie nutzen. Wir weisen darauf hin, dass die Daten\u00FCbertragung im Internet (z.\u2009B. bei der Kommunikation per E-Mail) Sicherheitsl\u00FCcken aufweisen kann. Ein l\u00FCckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m\u00F6glich.",
+    "legal.privacy.s3.verantwortlich.title": "Hinweis zur verantwortlichen Stelle",
+    "legal.privacy.s3.verantwortlich.text": "Die verantwortliche Stelle f\u00FCr die Datenverarbeitung auf dieser Website ist in Abschnitt 2 dieser Datenschutzerkl\u00E4rung aufgef\u00FChrt.",
+    "legal.privacy.s3.speicherdauer.title": "Speicherdauer",
+    "legal.privacy.s3.speicherdauer.text": "Soweit innerhalb dieser Datenschutzerkl\u00E4rung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck f\u00FCr die Datenverarbeitung entf\u00E4llt. Wenn Sie ein berechtigtes L\u00F6schersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gel\u00F6scht, sofern wir keine anderen rechtlich zul\u00E4ssigen Gr\u00FCnde f\u00FCr die Speicherung Ihrer personenbezogenen Daten haben.",
+    "legal.privacy.s3.rechtsgrundlagen.title": "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung",
+    "legal.privacy.s3.rechtsgrundlagen.text": "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009a DSGVO bzw. Art.\u20099 Abs.\u20092 lit.\u2009a DSGVO. Sofern die Verarbeitung zur Erf\u00FCllung eines Vertrags oder vorvertraglicher Ma\u00DFnahmen erforderlich ist, verarbeiten wir Ihre Daten auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009b DSGVO. Sofern die Verarbeitung zur Erf\u00FCllung einer rechtlichen Verpflichtung erforderlich ist, erfolgt sie auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009c DSGVO. Sofern die Verarbeitung zur Wahrung berechtigter Interessen erforderlich ist, erfolgt sie auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO.",
+    "legal.privacy.s3.widerruf.title": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+    "legal.privacy.s3.widerruf.text": "Viele Datenverarbeitungsvorg\u00E4nge sind nur mit Ihrer ausdr\u00FCcklichen Einwilligung m\u00F6glich. Sie k\u00F6nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtm\u00E4\u00DFigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber\u00FChrt.",
+    "legal.privacy.s3.widerspruch.title": "Widerspruchsrecht gegen die Datenerhebung (Art.\u200921 DSGVO)",
+    "legal.privacy.s3.widerspruch.text": "Wenn die Datenverarbeitung auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gr\u00FCnden, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen. Die jeweilige Rechtsgrundlage, auf der eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerkl\u00E4rung. Wenn Sie Widerspruch einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir k\u00F6nnen zwingende schutzw\u00FCrdige Gr\u00FCnde f\u00FCr die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten \u00FCberwiegen.",
+    "legal.privacy.s3.beschwerde.title": "Beschwerderecht bei der zust\u00E4ndigen Aufsichtsbeh\u00F6rde",
+    "legal.privacy.s3.beschwerde.text": "Im Falle von Verst\u00F6\u00DFen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbeh\u00F6rde zu. Die f\u00FCr uns zust\u00E4ndige Aufsichtsbeh\u00F6rde ist:",
+
+    // Section 4
+    "legal.privacy.s4.title": "4. Datenerfassung auf dieser Website",
+    "legal.privacy.s4.server.title": "Server-Log-Dateien",
+    "legal.privacy.s4.server.text1": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns \u00FCbermittelt. Dies sind:",
+    "legal.privacy.s4.server.item1": "Browsertyp und Browserversion",
+    "legal.privacy.s4.server.item2": "Verwendetes Betriebssystem",
+    "legal.privacy.s4.server.item3": "Referrer URL",
+    "legal.privacy.s4.server.item4": "Hostname des zugreifenden Rechners",
+    "legal.privacy.s4.server.item5": "Uhrzeit der Serveranfrage",
+    "legal.privacy.s4.server.item6": "IP-Adresse",
+    "legal.privacy.s4.server.text2": "Eine Zusammenf\u00FChrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website \u2014 hierzu m\u00FCssen die Server-Log-Dateien erfasst werden.",
+    "legal.privacy.s4.contact.title": "Anfrage per E-Mail oder Telefon",
+    "legal.privacy.s4.contact.text1": "Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage, E-Mail-Adresse, Telefonnummer) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.",
+    "legal.privacy.s4.contact.text2": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009b DSGVO, sofern Ihre Anfrage mit der Erf\u00FCllung eines Vertrags zusammenh\u00E4ngt oder zur Durchf\u00FChrung vorvertraglicher Ma\u00DFnahmen erforderlich ist. In allen \u00FCbrigen F\u00E4llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO).",
+    "legal.privacy.s4.contact.text3": "Die von Ihnen an uns per Kontaktanfragen \u00FCbersandten Daten verbleiben bei uns, bis Sie uns zur L\u00F6schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f\u00FCr die Datenspeicherung entf\u00E4llt. Zwingende gesetzliche Bestimmungen \u2014 insbesondere gesetzliche Aufbewahrungsfristen \u2014 bleiben unber\u00FChrt.",
+
+    // Section 5
+    "legal.privacy.s5.title": "5. Externe Dienste und Inhalte",
+    "legal.privacy.s5.fonts.title": "Google Fonts",
+    "legal.privacy.s5.fonts.text1": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite l\u00E4dt Ihr Browser die ben\u00F6tigten Fonts direkt von den Google-Servern (fonts.googleapis.com und fonts.gstatic.com). Dabei wird Ihre IP-Adresse an die Server von Google \u00FCbertragen.",
+    "legal.privacy.s5.fonts.text2": "Die Nutzung von Google Fonts erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website.",
+    "legal.privacy.s5.fonts.text3": "Weitere Informationen zu Google Fonts finden Sie in der Datenschutzerkl\u00E4rung von Google:",
+    "legal.privacy.s5.maps.title": "Google Maps",
+    "legal.privacy.s5.maps.text1": "Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited (\u201EGoogle\u201C), Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden der Karte wird eine Verbindung zu den Servern von Google hergestellt. Dabei wird Ihre IP-Adresse und ggf. Ihr Standort an Google \u00FCbertragen.",
+    "legal.privacy.s5.maps.text2": "Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO dar.",
+    "legal.privacy.s5.maps.text3": "Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl\u00E4rung von Google:",
+    "legal.privacy.s5.tailwind.title": "Tailwind CSS CDN",
+    "legal.privacy.s5.tailwind.text1": "Diese Website nutzt das CSS-Framework Tailwind CSS, das \u00FCber ein Content Delivery Network (CDN) unter cdn.tailwindcss.com eingebunden wird. Beim Aufruf unserer Seiten wird eine Verbindung zu den Servern des CDN-Anbieters hergestellt. Dabei wird Ihre IP-Adresse an den CDN-Server \u00FCbertragen.",
+    "legal.privacy.s5.tailwind.text2": "Die Einbindung erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer technisch korrekten und optisch ansprechenden Darstellung seiner Website.",
+    "legal.privacy.s5.unsplash.title": "Unsplash Bilder",
+    "legal.privacy.s5.unsplash.text1": "Auf dieser Website werden Bilder von Unsplash (images.unsplash.com) eingebunden. Beim Laden der Bilder wird eine Verbindung zu den Servern von Unsplash hergestellt. Dabei wird Ihre IP-Adresse an die Server von Unsplash \u00FCbertragen.",
+    "legal.privacy.s5.unsplash.text2": "Die Einbindung erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer ansprechenden visuellen Gestaltung seiner Website.",
+    "legal.privacy.s5.unsplash.text3": "Weitere Informationen finden Sie in der Datenschutzerkl\u00E4rung von Unsplash:",
+
+    // Section 6
+    "legal.privacy.s6.title": "6. Cookies",
+    "legal.privacy.s6.text1": "Diese Website verwendet keine Tracking- oder Analyse-Cookies. Es werden keine Cookies zu Werbezwecken eingesetzt.",
+    "legal.privacy.s6.text2": "Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) wird ausschlie\u00DFlich der localStorage Ihres Browsers verwendet. Dabei handelt es sich um eine technisch notwendige Funktion, die keine personenbezogenen Daten an unsere Server \u00FCbertr\u00E4gt. Die gespeicherte Sprachpr\u00E4ferenz verbleibt ausschlie\u00DFlich auf Ihrem Ger\u00E4t.",
+    "legal.privacy.s6.text3": "Da keine Tracking- oder Analyse-Cookies verwendet werden, ist kein Cookie-Consent-Banner erforderlich.",
+
+    // Section 7
+    "legal.privacy.s7.title": "7. Ihre Rechte als betroffene Person",
+    "legal.privacy.s7.intro": "Ihnen stehen unter den Voraussetzungen der DSGVO folgende Rechte gegen\u00FCber uns in Bezug auf Ihre personenbezogenen Daten zu:",
+    "legal.privacy.s7.right1.title": "Auskunftsrecht (Art.\u200915 DSGVO)",
+    "legal.privacy.s7.right1.text": "Sie haben das Recht, Auskunft \u00FCber Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen. Insbesondere k\u00F6nnen Sie Auskunft \u00FCber die Verarbeitungszwecke, die Kategorien der personenbezogenen Daten, die Empf\u00E4nger und die geplante Speicherdauer verlangen.",
+    "legal.privacy.s7.right2.title": "Recht auf Berichtigung (Art.\u200916 DSGVO)",
+    "legal.privacy.s7.right2.text": "Sie haben das Recht, unverz\u00FCglich die Berichtigung unrichtiger oder die Vervollst\u00E4ndigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen.",
+    "legal.privacy.s7.right3.title": "Recht auf L\u00F6schung (Art.\u200917 DSGVO)",
+    "legal.privacy.s7.right3.text": "Sie haben das Recht, die L\u00F6schung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Aus\u00FCbung des Rechts auf freie Meinungs\u00E4u\u00DFerung, zur Erf\u00FCllung einer rechtlichen Verpflichtung oder aus Gr\u00FCnden des \u00F6ffentlichen Interesses erforderlich ist.",
+    "legal.privacy.s7.right4.title": "Recht auf Einschr\u00E4nkung der Verarbeitung (Art.\u200918 DSGVO)",
+    "legal.privacy.s7.right4.text": "Sie haben das Recht, die Einschr\u00E4nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, soweit die Richtigkeit der Daten von Ihnen bestritten wird, die Verarbeitung unrechtm\u00E4\u00DFig ist oder wir die Daten nicht mehr ben\u00F6tigen.",
+    "legal.privacy.s7.right5.title": "Recht auf Daten\u00FCbertragbarkeit (Art.\u200920 DSGVO)",
+    "legal.privacy.s7.right5.text": "Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, g\u00E4ngigen und maschinenlesbaren Format zu erhalten oder die \u00DCbermittlung an einen anderen Verantwortlichen zu verlangen.",
+    "legal.privacy.s7.right6.title": "Widerspruchsrecht (Art.\u200921 DSGVO)",
+    "legal.privacy.s7.right6.text": "Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten, die aufgrund von Art.\u20096 Abs.\u20091 lit.\u2009e oder f DSGVO erfolgt, Widerspruch einzulegen. Wir verarbeiten die personenbezogenen Daten dann nicht mehr, es sei denn, es liegen zwingende schutzw\u00FCrdige Gr\u00FCnde vor.",
+
+    // Section 8
+    "legal.privacy.s8.title": "8. Aktualit\u00E4t und \u00C4nderung dieser Datenschutzerkl\u00E4rung",
+    "legal.privacy.s8.text": "Diese Datenschutzerkl\u00E4rung ist aktuell g\u00FCltig und hat den Stand M\u00E4rz 2026. Durch die Weiterentwicklung unserer Website oder aufgrund ge\u00E4nderter gesetzlicher bzw. beh\u00F6rdlicher Vorgaben kann es notwendig werden, diese Datenschutzerkl\u00E4rung zu \u00E4ndern. Die jeweils aktuelle Datenschutzerkl\u00E4rung kann jederzeit auf dieser Seite abgerufen werden."
   },
 
   en: {
@@ -814,7 +938,131 @@ const TRANSLATIONS = {
     "actDetail.telescope.perfectFor.1": "Science fans",
     "actDetail.telescope.perfectFor.2": "Families",
     "actDetail.telescope.perfectFor.3": "Nature lovers",
-    "actDetail.telescope.perfectFor.4": "The curious"
+    "actDetail.telescope.perfectFor.4": "The curious",
+
+    // ===== LEGAL PAGES (EN) =====
+
+    // Privacy policy breadcrumb & footer links
+    "legal.privacy.breadcrumb": "Privacy Policy",
+    "legal.impressum.breadcrumb": "Legal Notice",
+
+    // Impressum page
+    "legal.impressum.title": "Legal Notice",
+    "legal.impressum.section1.title": "Information pursuant to \u00A7 5 DDG",
+    "legal.impressum.section1.country": "Germany",
+    "legal.impressum.section2.title": "Contact",
+    "legal.impressum.section2.phone": "Phone:",
+    "legal.impressum.section2.email": "Email:",
+    "legal.impressum.section3.title": "VAT ID",
+    "legal.impressum.section3.text": "VAT identification number pursuant to \u00A7 27 a of the German VAT Act:",
+    "legal.impressum.section3.placeholder": "[to be added]",
+    "legal.impressum.section4.title": "Responsible for content pursuant to \u00A7 18 para. 2 MStV",
+    "legal.impressum.section5.title": "EU Dispute Resolution",
+    "legal.impressum.section5.text1": "The European Commission provides a platform for online dispute resolution (ODR):",
+    "legal.impressum.section5.text2": "Our email address can be found above in the legal notice.",
+    "legal.impressum.section5.text3": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "legal.impressum.section6.title": "Liability for Content",
+    "legal.impressum.section6.text1": "As a service provider, we are responsible for our own content on these pages in accordance with general legislation pursuant to \u00A7 7 para. 1 TMG. However, according to \u00A7\u00A7 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "legal.impressum.section6.text2": "Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. If we become aware of any such infringements, we will remove this content immediately.",
+    "legal.impressum.section7.title": "Liability for Links",
+    "legal.impressum.section7.text1": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages.",
+    "legal.impressum.section7.text2": "The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a violation of the law. If we become aware of any infringements, we will remove such links immediately.",
+    "legal.impressum.section8.title": "Copyright",
+    "legal.impressum.section8.text1": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any form of commercialization of such material beyond the scope of copyright law require the prior written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.",
+    "legal.impressum.section8.text2": "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately.",
+    "legal.impressum.section8.credits": "Image credits: Images from Unsplash (unsplash.com) used under the Unsplash License.",
+
+    // Privacy policy page
+    "legal.privacy.title": "Privacy Policy",
+
+    // Section 1
+    "legal.privacy.s1.title": "1. Privacy at a Glance",
+    "legal.privacy.s1.general.title": "General Information",
+    "legal.privacy.s1.general.text": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you. Detailed information on the subject of data protection can be found in our privacy policy listed below.",
+    "legal.privacy.s1.collection.title": "Data Collection on This Website",
+    "legal.privacy.s1.collection.who": "Who is responsible for data collection on this website?\nData processing on this website is carried out by the website operator: Eva-Maria Mauer Willrich, Hardtstra\u00DFe 11/13, 53945 Blankenheim-Reetz.",
+    "legal.privacy.s1.collection.how": "How do we collect your data?\nYour data is collected in part by you providing it to us, e.g. through an enquiry by email or telephone. Other data is collected automatically or with your consent when you visit the website by our IT systems. This is primarily technical data (e.g. internet browser, operating system or time of page access).",
+
+    // Section 2
+    "legal.privacy.s2.title": "2. Responsible Party",
+    "legal.privacy.s2.text": "The responsible party is the natural person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, email addresses, etc.).",
+
+    // Section 3
+    "legal.privacy.s3.title": "3. General Information and Mandatory Disclosures",
+    "legal.privacy.s3.datenschutz.title": "Data Protection",
+    "legal.privacy.s3.datenschutz.text": "The operator of these pages takes the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy. When you use this website, various personal data is collected. This privacy policy explains what data we collect and what we use it for. We would like to point out that data transmission over the Internet (e.g. communication by email) may have security gaps. Complete protection of data against access by third parties is not possible.",
+    "legal.privacy.s3.verantwortlich.title": "Note on the Responsible Party",
+    "legal.privacy.s3.verantwortlich.text": "The responsible party for data processing on this website is listed in Section 2 of this privacy policy.",
+    "legal.privacy.s3.speicherdauer.title": "Storage Duration",
+    "legal.privacy.s3.speicherdauer.text": "Unless a more specific storage period has been stated within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke consent for data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data.",
+    "legal.privacy.s3.rechtsgrundlagen.title": "General Information on the Legal Basis of Data Processing",
+    "legal.privacy.s3.rechtsgrundlagen.text": "If you have consented to data processing, we process your personal data on the basis of Art. 6(1)(a) GDPR or Art. 9(2)(a) GDPR. If processing is necessary for the performance of a contract or pre-contractual measures, we process your data on the basis of Art. 6(1)(b) GDPR. If processing is necessary for compliance with a legal obligation, it is carried out on the basis of Art. 6(1)(c) GDPR. If processing is necessary for the purposes of legitimate interests, it is carried out on the basis of Art. 6(1)(f) GDPR.",
+    "legal.privacy.s3.widerruf.title": "Withdrawal of Your Consent to Data Processing",
+    "legal.privacy.s3.widerruf.text": "Many data processing operations are only possible with your express consent. You may revoke any consent you have already given at any time. The lawfulness of the data processing carried out before the revocation remains unaffected by the revocation.",
+    "legal.privacy.s3.widerspruch.title": "Right to Object to Data Collection (Art. 21 GDPR)",
+    "legal.privacy.s3.widerspruch.text": "If data processing is based on Art. 6(1)(e) or (f) GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of your personal data. The respective legal basis on which processing is based can be found in this privacy policy. If you object, we will no longer process your affected personal data unless we can demonstrate compelling legitimate grounds for processing that override your interests, rights and freedoms.",
+    "legal.privacy.s3.beschwerde.title": "Right to Lodge a Complaint with the Supervisory Authority",
+    "legal.privacy.s3.beschwerde.text": "In the event of breaches of the GDPR, data subjects have a right to lodge a complaint with a supervisory authority. The supervisory authority responsible for us is:",
+
+    // Section 4
+    "legal.privacy.s4.title": "4. Data Collection on This Website",
+    "legal.privacy.s4.server.title": "Server Log Files",
+    "legal.privacy.s4.server.text1": "The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:",
+    "legal.privacy.s4.server.item1": "Browser type and version",
+    "legal.privacy.s4.server.item2": "Operating system used",
+    "legal.privacy.s4.server.item3": "Referrer URL",
+    "legal.privacy.s4.server.item4": "Hostname of the accessing computer",
+    "legal.privacy.s4.server.item5": "Time of server request",
+    "legal.privacy.s4.server.item6": "IP address",
+    "legal.privacy.s4.server.text2": "This data is not merged with other data sources. The collection of this data is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the technically error-free presentation and optimisation of their website \u2014 server log files must be collected for this purpose.",
+    "legal.privacy.s4.contact.title": "Enquiry by Email or Telephone",
+    "legal.privacy.s4.contact.text1": "If you contact us by email or telephone, your enquiry including all resulting personal data (name, enquiry, email address, telephone number) will be stored and processed by us for the purpose of handling your request.",
+    "legal.privacy.s4.contact.text2": "The processing of this data is based on Art. 6(1)(b) GDPR if your enquiry is related to the performance of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in effectively handling the enquiries directed to us (Art. 6(1)(f) GDPR).",
+    "legal.privacy.s4.contact.text3": "The data you send to us via contact enquiries will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies. Mandatory statutory provisions \u2014 in particular statutory retention periods \u2014 remain unaffected.",
+
+    // Section 5
+    "legal.privacy.s5.title": "5. External Services and Content",
+    "legal.privacy.s5.fonts.title": "Google Fonts",
+    "legal.privacy.s5.fonts.text1": "This site uses so-called Google Fonts provided by Google for the uniform display of fonts. When you access a page, your browser loads the required fonts directly from Google servers (fonts.googleapis.com and fonts.gstatic.com). Your IP address is transmitted to Google servers in the process.",
+    "legal.privacy.s5.fonts.text2": "The use of Google Fonts is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the uniform presentation of the typeface on their website.",
+    "legal.privacy.s5.fonts.text3": "Further information about Google Fonts can be found in Google's privacy policy:",
+    "legal.privacy.s5.maps.title": "Google Maps",
+    "legal.privacy.s5.maps.text1": "This website uses the Google Maps mapping service. The provider is Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Ireland. When the map is loaded, a connection to Google servers is established. Your IP address and possibly your location are transmitted to Google.",
+    "legal.privacy.s5.maps.text2": "Google Maps is used in the interest of an appealing presentation of our online offerings and easy findability of the locations we indicate on the website. This represents a legitimate interest within the meaning of Art. 6(1)(f) GDPR.",
+    "legal.privacy.s5.maps.text3": "More information on the handling of user data can be found in Google's privacy policy:",
+    "legal.privacy.s5.tailwind.title": "Tailwind CSS CDN",
+    "legal.privacy.s5.tailwind.text1": "This website uses the CSS framework Tailwind CSS, which is loaded via a Content Delivery Network (CDN) at cdn.tailwindcss.com. When you access our pages, a connection to the CDN provider's servers is established. Your IP address is transmitted to the CDN server.",
+    "legal.privacy.s5.tailwind.text2": "This integration is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the technically correct and visually appealing presentation of their website.",
+    "legal.privacy.s5.unsplash.title": "Unsplash Images",
+    "legal.privacy.s5.unsplash.text1": "This website embeds images from Unsplash (images.unsplash.com). When the images are loaded, a connection to Unsplash servers is established. Your IP address is transmitted to Unsplash servers.",
+    "legal.privacy.s5.unsplash.text2": "This integration is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the visually appealing design of their website.",
+    "legal.privacy.s5.unsplash.text3": "Further information can be found in Unsplash's privacy policy:",
+
+    // Section 6
+    "legal.privacy.s6.title": "6. Cookies",
+    "legal.privacy.s6.text1": "This website does not use any tracking or analytics cookies. No cookies are used for advertising purposes.",
+    "legal.privacy.s6.text2": "To store your language preference (German/English), only the localStorage of your browser is used. This is a technically necessary function that does not transmit any personal data to our servers. The stored language preference remains exclusively on your device.",
+    "legal.privacy.s6.text3": "Since no tracking or analytics cookies are used, no cookie consent banner is required.",
+
+    // Section 7
+    "legal.privacy.s7.title": "7. Your Rights as a Data Subject",
+    "legal.privacy.s7.intro": "Under the conditions of the GDPR, you have the following rights with regard to your personal data:",
+    "legal.privacy.s7.right1.title": "Right of Access (Art. 15 GDPR)",
+    "legal.privacy.s7.right1.text": "You have the right to request information about your personal data processed by us. In particular, you may request information about the processing purposes, the categories of personal data, the recipients and the planned storage period.",
+    "legal.privacy.s7.right2.title": "Right to Rectification (Art. 16 GDPR)",
+    "legal.privacy.s7.right2.text": "You have the right to request the immediate rectification of inaccurate or the completion of your personal data stored by us.",
+    "legal.privacy.s7.right3.title": "Right to Erasure (Art. 17 GDPR)",
+    "legal.privacy.s7.right3.text": "You have the right to request the deletion of your personal data stored by us, unless the processing is necessary for exercising the right of freedom of expression, for compliance with a legal obligation, or for reasons of public interest.",
+    "legal.privacy.s7.right4.title": "Right to Restriction of Processing (Art. 18 GDPR)",
+    "legal.privacy.s7.right4.text": "You have the right to request restriction of the processing of your personal data where the accuracy of the data is contested by you, the processing is unlawful, or we no longer need the data.",
+    "legal.privacy.s7.right5.title": "Right to Data Portability (Art. 20 GDPR)",
+    "legal.privacy.s7.right5.text": "You have the right to receive your personal data that you have provided to us in a structured, commonly used and machine-readable format, or to request the transfer to another controller.",
+    "legal.privacy.s7.right6.title": "Right to Object (Art. 21 GDPR)",
+    "legal.privacy.s7.right6.text": "You have the right to object at any time to the processing of your personal data carried out on the basis of Art. 6(1)(e) or (f) GDPR. We will then no longer process the personal data unless there are compelling legitimate grounds for the processing.",
+
+    // Section 8
+    "legal.privacy.s8.title": "8. Currency and Amendment of This Privacy Policy",
+    "legal.privacy.s8.text": "This privacy policy is currently valid and was last updated in March 2026. Due to the further development of our website or changes in legal or regulatory requirements, it may become necessary to amend this privacy policy. The current privacy policy can be accessed at any time on this page."
   }
 };
 

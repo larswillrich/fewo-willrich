@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerkl&auml;rung | FeWo Willrich</title>
+  <meta name="description" content="Datenschutzerkl&auml;rung der FeWo Willrich &mdash; Informationen zur Verarbeitung Ihrer personenbezogenen Daten gem&auml;&szlig; DSGVO.">
+  <link rel="canonical" href="https://fewo-willrich.de/datenschutz.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Datenschutzerkl&auml;rung | FeWo Willrich">
+  <meta property="og:description" content="Datenschutzerkl&auml;rung der FeWo Willrich &mdash; Informationen zur Verarbeitung Ihrer personenbezogenen Daten gem&auml;&szlig; DSGVO.">
+  <meta property="og:url" content="https://fewo-willrich.de/datenschutz.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="FeWo Willrich">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>W</text></svg>">
+
+  <script src="translations.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stone: { 850: '#2C1810', 750: '#3D2B1F' },
+            warm: {
+              50: '#FDFBF7', 100: '#F5F0EB', 200: '#EDE5DB', 300: '#D4B8A0',
+              400: '#C4A882', 500: '#8B7355', 600: '#6B5B45', 700: '#5C4A3F', 800: '#3D2B1F',
+            },
+            forest: { 400: '#6B8F5E', 500: '#4A7A3D', 600: '#3D5A3E', 700: '#2D4A2E' },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::selection { background-color: #C4A882; color: #2C1810; }
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+    .nav-solid {
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
+      box-shadow: 0 1px 3px rgba(44, 24, 16, 0.06);
+    }
+    .nav-solid .nav-link { color: #2C1810; }
+    .nav-solid .nav-logo { color: #2C1810; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 1px;
+      background: currentColor; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); transform: translateX(-50%);
+    }
+    .nav-link:hover::after { width: 80%; }
+    /* Nav dropdown */
+    .nav-dropdown-trigger { position: relative; }
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      min-width: 260px;
+      padding-top: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+    .nav-dropdown-trigger:hover .nav-dropdown,
+    .nav-dropdown:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-inner {
+      background: rgba(253,251,247,0.97);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(196,168,130,0.15);
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(44,24,16,0.12);
+      padding: 8px;
+    }
+    .nav-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #2C1810;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .nav-dropdown a:hover {
+      background: rgba(196,168,130,0.12);
+    }
+    .nav-dropdown a::after { display: none; }
+    .nav-dropdown .dd-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .mobile-menu.open { transform: translateX(0); }
+    .tracking-widest-custom { letter-spacing: 0.25em; }
+  </style>
+</head>
+<body class="bg-warm-50 text-warm-800 font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-solid transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="nav-logo transition-colors duration-300 font-serif text-2xl font-semibold tracking-wide">
+          FeWo Willrich
+        </a>
+        <div class="hidden md:flex items-center gap-10">
+          <a href="/#willkommen" data-i18n="nav.willkommen" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Willkommen</a>
+          <a href="/#apartments" data-i18n="nav.apartments" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Apartments</a>
+          <div class="nav-dropdown-trigger">
+            <a href="/#umgebung" data-i18n="nav.umgebung" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Umgebung</a>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-inner">
+                <a href="/aktivitaeten/freilinger-see.html">
+                  <span class="dd-icon bg-blue-50"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21c-1.5-1.5-6-6-6-10.5A6 6 0 0118 10.5c0 4.5-4.5 9-6 10.5z"/><circle cx="12" cy="10.5" r="1.5" stroke-width="1.5"/></svg></span>
+                  <span>Freilinger See</span>
+                </a>
+                <a href="/aktivitaeten/eifelsteig.html">
+                  <span class="dd-icon bg-green-50"><svg class="w-4 h-4 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l6-6m0 0l4-8 4 8m-8 0h8m-4-8V3"/></svg></span>
+                  <span>Eifelsteig</span>
+                </a>
+                <a href="/aktivitaeten/burg-blankenheim.html">
+                  <span class="dd-icon bg-amber-50"><svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V11m0 0L7 6h10l-5 5zm-5 10h10M4 21h16"/></svg></span>
+                  <span>Burg Blankenheim</span>
+                </a>
+                <a href="/aktivitaeten/nuerburgring.html">
+                  <span class="dd-icon bg-red-50"><svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13h2l2-4h4l2 4h2l2-4h4l1 4"/><circle cx="7" cy="17" r="2" stroke-width="1.5"/><circle cx="17" cy="17" r="2" stroke-width="1.5"/></svg></span>
+                  <span>N&uuml;rburgring</span>
+                </a>
+                <a href="/aktivitaeten/eifel-zoo.html">
+                  <span class="dd-icon bg-emerald-50"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 5.25c0 .372-.012.742-.036 1.11a5.01 5.01 0 01-.675 2.175 3.001 3.001 0 00-.405 1.488l-.005.147a3 3 0 001.077 2.324l.14.116A3.75 3.75 0 0118 16.244V21H6V16.244a3.75 3.75 0 011.404-2.934l.14-.116a3 3 0 001.077-2.324V10.5z"/></svg></span>
+                  <span>Eifel-Zoo</span>
+                </a>
+                <a href="/aktivitaeten/radioteleskop-effelsberg.html">
+                  <span class="dd-icon bg-indigo-50"><svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.789M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></span>
+                  <span>Radioteleskop Effelsberg</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/#preise" data-i18n="nav.preise" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Preise</a>
+          <a href="/#kontakt" data-i18n="nav.kontakt" class="nav-link transition-colors duration-300 text-sm font-medium tracking-widest-custom uppercase hover:text-warm-400">Kontakt</a>
+          <button id="langToggle" class="nav-link transition-colors duration-300 text-xl hover:opacity-80 cursor-pointer leading-none" aria-label="Switch language" title="English">&#127468;&#127463;</button>
+        </div>
+        <button id="menuBtn" class="md:hidden nav-link transition-colors duration-300 p-2" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-warm-50/98 backdrop-blur-xl z-50 flex flex-col items-center justify-center gap-8">
+      <button id="closeMenu" class="absolute top-6 right-6 text-warm-800 p-2">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="/#willkommen" data-i18n="nav.willkommen" class="mobile-nav-link text-warm-800 font-serif text-3xl font-medium hover:text-warm-400 transition-colors">Willkommen</a>
+      <a href="/#apartments" data-i18n="nav.apartments" class="mobile-nav-link text-warm-800 font-serif text-3xl font-medium hover:text-warm-400 transition-colors">Apartments</a>
+      <a href="/#umgebung" data-i18n="nav.umgebung" class="mobile-nav-link text-warm-800 font-serif text-3xl font-medium hover:text-warm-400 transition-colors">Umgebung</a>
+      <a href="/#preise" data-i18n="nav.preise" class="mobile-nav-link text-warm-800 font-serif text-3xl font-medium hover:text-warm-400 transition-colors">Preise</a>
+      <a href="/#kontakt" data-i18n="nav.kontakt" class="mobile-nav-link text-warm-800 font-serif text-3xl font-medium hover:text-warm-400 transition-colors">Kontakt</a>
+      <button id="langToggleMobile" class="mobile-nav-link text-3xl hover:opacity-80 transition-opacity mt-4 cursor-pointer" aria-label="Switch language" title="English">&#127468;&#127463;</button>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="pt-24 pb-4 bg-warm-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav class="flex text-sm text-warm-400" aria-label="Breadcrumb">
+        <a href="/" data-i18n="actDetail.backHome" class="hover:text-warm-600 transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <span data-i18n="legal.privacy.breadcrumb" class="text-warm-600 font-medium">Datenschutz</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY CONTENT -->
+  <section class="py-12 md:py-20 bg-warm-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+
+      <!-- Page Title -->
+      <h1 data-i18n="legal.privacy.title" class="font-serif text-4xl md:text-5xl text-warm-800 font-bold mb-12">Datenschutzerkl&auml;rung</h1>
+
+      <!-- Section 1: Datenschutz auf einen Blick -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s1.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">1. Datenschutz auf einen Blick</h2>
+
+        <h3 data-i18n="legal.privacy.s1.general.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Allgemeine Hinweise</h3>
+        <p data-i18n="legal.privacy.s1.general.text" class="text-warm-600 leading-relaxed mb-4">Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
+
+        <h3 data-i18n="legal.privacy.s1.collection.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Datenerfassung auf dieser Website</h3>
+        <p data-i18n="legal.privacy.s1.collection.who" class="text-warm-600 leading-relaxed mb-4"><strong>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</strong><br>Die Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiberin: Eva-Maria Mauer Willrich, Hardtstra&szlig;e 11/13, 53945 Blankenheim-Reetz.</p>
+        <p data-i18n="legal.privacy.s1.collection.how" class="text-warm-600 leading-relaxed mb-4"><strong>Wie erfassen wir Ihre Daten?</strong><br>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, z.&thinsp;B. durch eine Anfrage per E-Mail oder Telefon. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&thinsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+      </div>
+
+      <!-- Section 2: Verantwortliche Stelle -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s2.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">2. Verantwortliche Stelle</h2>
+        <div class="bg-warm-100 rounded-xl p-6 md:p-8 mb-4">
+          <p class="text-warm-700 font-medium mb-1">Eva-Maria Mauer Willrich</p>
+          <p class="text-warm-600">Hardtstra&szlig;e 11/13</p>
+          <p class="text-warm-600">53945 Blankenheim-Reetz</p>
+          <p class="text-warm-600 mt-2">Tel: <a href="tel:+4924491763" class="text-warm-500 hover:text-warm-400 transition-colors">+49 (0) 2449 1763</a></p>
+          <p class="text-warm-600">E-Mail: <a href="mailto:evamariawillrich@gmail.com" class="text-warm-500 hover:text-warm-400 transition-colors">evamariawillrich@gmail.com</a></p>
+        </div>
+        <p data-i18n="legal.privacy.s2.text" class="text-warm-600 leading-relaxed">Verantwortliche Stelle ist die nat&uuml;rliche Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&thinsp;B. Namen, E-Mail-Adressen o.&thinsp;&Auml;.) entscheidet.</p>
+      </div>
+
+      <!-- Section 3: Allgemeine Hinweise und Pflichtinformationen -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s3.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+        <h3 data-i18n="legal.privacy.s3.datenschutz.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Datenschutz</h3>
+        <p data-i18n="legal.privacy.s3.datenschutz.text" class="text-warm-600 leading-relaxed mb-4">Die Betreiberin dieser Seiten nimmt den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung. Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Die vorliegende Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und wof&uuml;r wir sie nutzen. Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&thinsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
+
+        <h3 data-i18n="legal.privacy.s3.verantwortlich.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Hinweis zur verantwortlichen Stelle</h3>
+        <p data-i18n="legal.privacy.s3.verantwortlich.text" class="text-warm-600 leading-relaxed mb-4">Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist in Abschnitt 2 dieser Datenschutzerkl&auml;rung aufgef&uuml;hrt.</p>
+
+        <h3 data-i18n="legal.privacy.s3.speicherdauer.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Speicherdauer</h3>
+        <p data-i18n="legal.privacy.s3.speicherdauer.text" class="text-warm-600 leading-relaxed mb-4">Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt. Wenn Sie ein berechtigtes L&ouml;schersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gel&ouml;scht, sofern wir keine anderen rechtlich zul&auml;ssigen Gr&uuml;nde f&uuml;r die Speicherung Ihrer personenbezogenen Daten haben.</p>
+
+        <h3 data-i18n="legal.privacy.s3.rechtsgrundlagen.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung</h3>
+        <p data-i18n="legal.privacy.s3.rechtsgrundlagen.text" class="text-warm-600 leading-relaxed mb-4">Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;a DSGVO bzw. Art.&thinsp;9 Abs.&thinsp;2 lit.&thinsp;a DSGVO. Sofern die Verarbeitung zur Erf&uuml;llung eines Vertrags oder vorvertraglicher Ma&szlig;nahmen erforderlich ist, verarbeiten wir Ihre Daten auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;b DSGVO. Sofern die Verarbeitung zur Erf&uuml;llung einer rechtlichen Verpflichtung erforderlich ist, erfolgt sie auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;c DSGVO. Sofern die Verarbeitung zur Wahrung berechtigter Interessen erforderlich ist, erfolgt sie auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO.</p>
+
+        <h3 data-i18n="legal.privacy.s3.widerruf.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+        <p data-i18n="legal.privacy.s3.widerruf.text" class="text-warm-600 leading-relaxed mb-4">Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.</p>
+
+        <h3 data-i18n="legal.privacy.s3.widerspruch.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Widerspruchsrecht gegen die Datenerhebung (Art.&thinsp;21 DSGVO)</h3>
+        <p data-i18n="legal.privacy.s3.widerspruch.text" class="text-warm-600 leading-relaxed mb-4">Wenn die Datenverarbeitung auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gr&uuml;nden, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen. Die jeweilige Rechtsgrundlage, auf der eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerkl&auml;rung. Wenn Sie Widerspruch einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir k&ouml;nnen zwingende schutzw&uuml;rdige Gr&uuml;nde f&uuml;r die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten &uuml;berwiegen.</p>
+
+        <h3 data-i18n="legal.privacy.s3.beschwerde.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde</h3>
+        <p data-i18n="legal.privacy.s3.beschwerde.text" class="text-warm-600 leading-relaxed mb-4">Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde zu. Die f&uuml;r uns zust&auml;ndige Aufsichtsbeh&ouml;rde ist:</p>
+        <div class="bg-warm-100 rounded-xl p-6 mb-4">
+          <p class="text-warm-700 font-medium mb-1">Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen</p>
+          <p class="text-warm-600">Kavalleriestr. 2&ndash;4</p>
+          <p class="text-warm-600">40213 D&uuml;sseldorf</p>
+          <p class="text-warm-600 mt-2">Website: <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">www.ldi.nrw.de</a></p>
+        </div>
+      </div>
+
+      <!-- Section 4: Datenerfassung auf dieser Website -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s4.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">4. Datenerfassung auf dieser Website</h2>
+
+        <h3 data-i18n="legal.privacy.s4.server.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Server-Log-Dateien</h3>
+        <p data-i18n="legal.privacy.s4.server.text1" class="text-warm-600 leading-relaxed mb-4">Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns &uuml;bermittelt. Dies sind:</p>
+        <ul class="list-disc list-inside text-warm-600 leading-relaxed mb-4 ml-4 space-y-1">
+          <li data-i18n="legal.privacy.s4.server.item1">Browsertyp und Browserversion</li>
+          <li data-i18n="legal.privacy.s4.server.item2">Verwendetes Betriebssystem</li>
+          <li data-i18n="legal.privacy.s4.server.item3">Referrer URL</li>
+          <li data-i18n="legal.privacy.s4.server.item4">Hostname des zugreifenden Rechners</li>
+          <li data-i18n="legal.privacy.s4.server.item5">Uhrzeit der Serveranfrage</li>
+          <li data-i18n="legal.privacy.s4.server.item6">IP-Adresse</li>
+        </ul>
+        <p data-i18n="legal.privacy.s4.server.text2" class="text-warm-600 leading-relaxed mb-4">Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website &mdash; hierzu m&uuml;ssen die Server-Log-Dateien erfasst werden.</p>
+
+        <h3 data-i18n="legal.privacy.s4.contact.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Anfrage per E-Mail oder Telefon</h3>
+        <p data-i18n="legal.privacy.s4.contact.text1" class="text-warm-600 leading-relaxed mb-4">Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage, E-Mail-Adresse, Telefonnummer) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.</p>
+        <p data-i18n="legal.privacy.s4.contact.text2" class="text-warm-600 leading-relaxed mb-4">Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO).</p>
+        <p data-i18n="legal.privacy.s4.contact.text3" class="text-warm-600 leading-relaxed mb-4">Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt. Zwingende gesetzliche Bestimmungen &mdash; insbesondere gesetzliche Aufbewahrungsfristen &mdash; bleiben unber&uuml;hrt.</p>
+      </div>
+
+      <!-- Section 5: Externe Dienste und Inhalte -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s5.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">5. Externe Dienste und Inhalte</h2>
+
+        <h3 data-i18n="legal.privacy.s5.fonts.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Google Fonts</h3>
+        <p data-i18n="legal.privacy.s5.fonts.text1" class="text-warm-600 leading-relaxed mb-4">Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite l&auml;dt Ihr Browser die ben&ouml;tigten Fonts direkt von den Google-Servern (fonts.googleapis.com und fonts.gstatic.com). Dabei wird Ihre IP-Adresse an die Server von Google &uuml;bertragen.</p>
+        <p data-i18n="legal.privacy.s5.fonts.text2" class="text-warm-600 leading-relaxed mb-4">Die Nutzung von Google Fonts erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website.</p>
+        <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.fonts.text3">Weitere Informationen zu Google Fonts finden Sie in der Datenschutzerkl&auml;rung von Google:</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://policies.google.com/privacy</a></p>
+
+        <h3 data-i18n="legal.privacy.s5.maps.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Google Maps</h3>
+        <p data-i18n="legal.privacy.s5.maps.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden der Karte wird eine Verbindung zu den Servern von Google hergestellt. Dabei wird Ihre IP-Adresse und ggf. Ihr Standort an Google &uuml;bertragen.</p>
+        <p data-i18n="legal.privacy.s5.maps.text2" class="text-warm-600 leading-relaxed mb-4">Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO dar.</p>
+        <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.maps.text3">Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von Google:</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://policies.google.com/privacy</a></p>
+
+        <h3 data-i18n="legal.privacy.s5.tailwind.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Tailwind CSS CDN</h3>
+        <p data-i18n="legal.privacy.s5.tailwind.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website nutzt das CSS-Framework Tailwind CSS, das &uuml;ber ein Content Delivery Network (CDN) unter cdn.tailwindcss.com eingebunden wird. Beim Aufruf unserer Seiten wird eine Verbindung zu den Servern des CDN-Anbieters hergestellt. Dabei wird Ihre IP-Adresse an den CDN-Server &uuml;bertragen.</p>
+        <p data-i18n="legal.privacy.s5.tailwind.text2" class="text-warm-600 leading-relaxed mb-4">Die Einbindung erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer technisch korrekten und optisch ansprechenden Darstellung seiner Website.</p>
+
+        <h3 data-i18n="legal.privacy.s5.unsplash.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Unsplash Bilder</h3>
+        <p data-i18n="legal.privacy.s5.unsplash.text1" class="text-warm-600 leading-relaxed mb-4">Auf dieser Website werden Bilder von Unsplash (images.unsplash.com) eingebunden. Beim Laden der Bilder wird eine Verbindung zu den Servern von Unsplash hergestellt. Dabei wird Ihre IP-Adresse an die Server von Unsplash &uuml;bertragen.</p>
+        <p data-i18n="legal.privacy.s5.unsplash.text2" class="text-warm-600 leading-relaxed mb-4">Die Einbindung erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer ansprechenden visuellen Gestaltung seiner Website.</p>
+        <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.unsplash.text3">Weitere Informationen finden Sie in der Datenschutzerkl&auml;rung von Unsplash:</span> <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://unsplash.com/privacy</a></p>
+      </div>
+
+      <!-- Section 6: Cookies -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s6.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">6. Cookies</h2>
+        <p data-i18n="legal.privacy.s6.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website verwendet keine Tracking- oder Analyse-Cookies. Es werden keine Cookies zu Werbezwecken eingesetzt.</p>
+        <p data-i18n="legal.privacy.s6.text2" class="text-warm-600 leading-relaxed mb-4">Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) wird ausschlie&szlig;lich der localStorage Ihres Browsers verwendet. Dabei handelt es sich um eine technisch notwendige Funktion, die keine personenbezogenen Daten an unsere Server &uuml;bertr&auml;gt. Die gespeicherte Sprachpr&auml;ferenz verbleibt ausschlie&szlig;lich auf Ihrem Ger&auml;t.</p>
+        <p data-i18n="legal.privacy.s6.text3" class="text-warm-600 leading-relaxed mb-4">Da keine Tracking- oder Analyse-Cookies verwendet werden, ist kein Cookie-Consent-Banner erforderlich.</p>
+      </div>
+
+      <!-- Section 7: Ihre Rechte -->
+      <div class="mb-14">
+        <h2 data-i18n="legal.privacy.s7.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">7. Ihre Rechte als betroffene Person</h2>
+        <p data-i18n="legal.privacy.s7.intro" class="text-warm-600 leading-relaxed mb-6">Ihnen stehen unter den Voraussetzungen der DSGVO folgende Rechte gegen&uuml;ber uns in Bezug auf Ihre personenbezogenen Daten zu:</p>
+
+        <div class="space-y-4">
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right1.title" class="text-warm-700 font-semibold mb-1">Auskunftsrecht (Art.&thinsp;15 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right1.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, Auskunft &uuml;ber Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen. Insbesondere k&ouml;nnen Sie Auskunft &uuml;ber die Verarbeitungszwecke, die Kategorien der personenbezogenen Daten, die Empf&auml;nger und die geplante Speicherdauer verlangen.</p>
+          </div>
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right2.title" class="text-warm-700 font-semibold mb-1">Recht auf Berichtigung (Art.&thinsp;16 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right2.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, unverz&uuml;glich die Berichtigung unrichtiger oder die Vervollst&auml;ndigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen.</p>
+          </div>
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right3.title" class="text-warm-700 font-semibold mb-1">Recht auf L&ouml;schung (Art.&thinsp;17 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right3.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, die L&ouml;schung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Aus&uuml;bung des Rechts auf freie Meinungs&auml;u&szlig;erung, zur Erf&uuml;llung einer rechtlichen Verpflichtung oder aus Gr&uuml;nden des &ouml;ffentlichen Interesses erforderlich ist.</p>
+          </div>
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right4.title" class="text-warm-700 font-semibold mb-1">Recht auf Einschr&auml;nkung der Verarbeitung (Art.&thinsp;18 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right4.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, soweit die Richtigkeit der Daten von Ihnen bestritten wird, die Verarbeitung unrechtm&auml;&szlig;ig ist oder wir die Daten nicht mehr ben&ouml;tigen.</p>
+          </div>
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right5.title" class="text-warm-700 font-semibold mb-1">Recht auf Daten&uuml;bertragbarkeit (Art.&thinsp;20 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right5.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, g&auml;ngigen und maschinenlesbaren Format zu erhalten oder die &Uuml;bermittlung an einen anderen Verantwortlichen zu verlangen.</p>
+          </div>
+          <div class="bg-warm-100 rounded-xl p-5">
+            <h3 data-i18n="legal.privacy.s7.right6.title" class="text-warm-700 font-semibold mb-1">Widerspruchsrecht (Art.&thinsp;21 DSGVO)</h3>
+            <p data-i18n="legal.privacy.s7.right6.text" class="text-warm-600 text-sm leading-relaxed">Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten, die aufgrund von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;e oder f DSGVO erfolgt, Widerspruch einzulegen. Wir verarbeiten die personenbezogenen Daten dann nicht mehr, es sei denn, es liegen zwingende schutzw&uuml;rdige Gr&uuml;nde vor.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 8: Aktualit&auml;t -->
+      <div class="mb-8">
+        <h2 data-i18n="legal.privacy.s8.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">8. Aktualit&auml;t und &Auml;nderung dieser Datenschutzerkl&auml;rung</h2>
+        <p data-i18n="legal.privacy.s8.text" class="text-warm-600 leading-relaxed mb-4">Diese Datenschutzerkl&auml;rung ist aktuell g&uuml;ltig und hat den Stand M&auml;rz 2026. Durch die Weiterentwicklung unserer Website oder aufgrund ge&auml;nderter gesetzlicher bzw. beh&ouml;rdlicher Vorgaben kann es notwendig werden, diese Datenschutzerkl&auml;rung zu &auml;ndern. Die jeweils aktuelle Datenschutzerkl&auml;rung kann jederzeit auf dieser Seite abgerufen werden.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-warm-800 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <h3 class="font-serif text-2xl text-white font-semibold mb-4">FeWo Willrich</h3>
+          <p data-i18n="footer.description" class="text-warm-400 leading-relaxed">Drei charmante Ferienwohnungen in einer historischen Scheune im Herzen der Eifel.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.navTitle" class="text-white font-medium mb-4 text-sm tracking-widest-custom uppercase">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="/#willkommen" data-i18n="nav.willkommen" class="text-warm-400 hover:text-warm-300 transition-colors">Willkommen</a></li>
+            <li><a href="/#apartments" data-i18n="nav.apartments" class="text-warm-400 hover:text-warm-300 transition-colors">Apartments</a></li>
+            <li><a href="/#preise" data-i18n="nav.preise" class="text-warm-400 hover:text-warm-300 transition-colors">Preise</a></li>
+            <li><a href="/#kontakt" data-i18n="nav.kontakt" class="text-warm-400 hover:text-warm-300 transition-colors">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contactTitle" class="text-white font-medium mb-4 text-sm tracking-widest-custom uppercase">Kontakt</h4>
+          <ul class="space-y-3 text-warm-400">
+            <li>Hardtstra&szlig;e 11/13</li>
+            <li>53945 Blankenheim-Reetz</li>
+            <li><a href="tel:+4924491763" class="hover:text-warm-300 transition-colors">+49 (0) 2449 1763</a></li>
+            <li><a href="mailto:evamariawillrich@gmail.com" class="hover:text-warm-300 transition-colors">evamariawillrich@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-warm-700 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <p class="text-warm-500 text-sm">&copy; <span id="footerYear">2025</span> FeWo Willrich. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
+          <span class="hidden sm:inline text-warm-600">|</span>
+          <div class="flex items-center gap-3 text-sm">
+            <a href="/datenschutz.html" data-i18n="legal.privacy.breadcrumb" class="text-warm-400 hover:text-warm-300 transition-colors">Datenschutz</a>
+            <span class="text-warm-600">&middot;</span>
+            <a href="/impressum.html" data-i18n="legal.impressum.breadcrumb" class="text-warm-400 hover:text-warm-300 transition-colors">Impressum</a>
+          </div>
+        </div>
+        <a href="#" class="inline-flex items-center gap-2 text-warm-400 hover:text-warm-300 transition-colors text-sm" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+          <span data-i18n="footer.backToTop">Nach oben</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('closeMenu').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.remove('open');
+      });
+    });
+
+    // Initialize language from shared translations.js
+    initLanguage();
+  </script>
+</body>
+</html>
