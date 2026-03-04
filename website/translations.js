@@ -493,6 +493,10 @@ const TRANSLATIONS = {
     "legal.privacy.s5.fonts.text1": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite l\u00E4dt Ihr Browser die ben\u00F6tigten Fonts direkt von den Google-Servern (fonts.googleapis.com und fonts.gstatic.com). Dabei wird Ihre IP-Adresse an die Server von Google \u00FCbertragen.",
     "legal.privacy.s5.fonts.text2": "Die Nutzung von Google Fonts erfolgt auf Grundlage von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website.",
     "legal.privacy.s5.fonts.text3": "Weitere Informationen zu Google Fonts finden Sie in der Datenschutzerkl\u00E4rung von Google:",
+    "legal.privacy.s5.analytics.title": "Google Analytics",
+    "legal.privacy.s5.analytics.text1": "Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited (\u201EGoogle\u201C), Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website erm\u00F6glichen. Die durch das Cookie erzeugten Informationen \u00FCber Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA \u00FCbertragen und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU gek\u00FCrzt wird.",
+    "legal.privacy.s5.analytics.text2": "Google Analytics wird nur nach Ihrer ausdr\u00FCcklichen Einwilligung geladen (Art.\u20096 Abs.\u20091 lit.\u2009a DSGVO). Sie k\u00F6nnen Ihre Einwilligung jederzeit widerrufen, indem Sie Ihre Cookie-Einstellungen in Ihrem Browser zur\u00FCcksetzen oder den localStorage-Eintrag \u201Ecookie-consent\u201C l\u00F6schen.",
+    "legal.privacy.s5.analytics.text3": "Weitere Informationen finden Sie in der Datenschutzerkl\u00E4rung von Google:",
     "legal.privacy.s5.maps.title": "Google Maps",
     "legal.privacy.s5.maps.text1": "Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited (\u201EGoogle\u201C), Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden der Karte wird eine Verbindung zu den Servern von Google hergestellt. Dabei wird Ihre IP-Adresse und ggf. Ihr Standort an Google \u00FCbertragen.",
     "legal.privacy.s5.maps.text2": "Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art.\u20096 Abs.\u20091 lit.\u2009f DSGVO dar.",
@@ -506,10 +510,10 @@ const TRANSLATIONS = {
     "legal.privacy.s5.unsplash.text3": "Weitere Informationen finden Sie in der Datenschutzerkl\u00E4rung von Unsplash:",
 
     // Section 6
-    "legal.privacy.s6.title": "6. Cookies",
-    "legal.privacy.s6.text1": "Diese Website verwendet keine Tracking- oder Analyse-Cookies. Es werden keine Cookies zu Werbezwecken eingesetzt.",
-    "legal.privacy.s6.text2": "Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) wird ausschlie\u00DFlich der localStorage Ihres Browsers verwendet. Dabei handelt es sich um eine technisch notwendige Funktion, die keine personenbezogenen Daten an unsere Server \u00FCbertr\u00E4gt. Die gespeicherte Sprachpr\u00E4ferenz verbleibt ausschlie\u00DFlich auf Ihrem Ger\u00E4t.",
-    "legal.privacy.s6.text3": "Da keine Tracking- oder Analyse-Cookies verwendet werden, ist kein Cookie-Consent-Banner erforderlich.",
+    "legal.privacy.s6.title": "6. Cookies und localStorage",
+    "legal.privacy.s6.text1": "Diese Website verwendet Cookies nur im Rahmen von Google Analytics und ausschlie\u00DFlich nach Ihrer ausdr\u00FCcklichen Einwilligung. Es werden keine Cookies zu Werbezwecken eingesetzt.",
+    "legal.privacy.s6.text2": "Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) und Ihrer Cookie-Einwilligung wird der localStorage Ihres Browsers verwendet. Dabei handelt es sich um technisch notwendige Funktionen, die keine personenbezogenen Daten an unsere Server \u00FCbertragen. Die gespeicherten Pr\u00E4ferenzen verbleiben ausschlie\u00DFlich auf Ihrem Ger\u00E4t.",
+    "legal.privacy.s6.text3": "Beim ersten Besuch der Website wird Ihnen ein Cookie-Consent-Banner angezeigt. Erst nach Ihrer Zustimmung werden Google Analytics Cookies gesetzt. Sie k\u00F6nnen Ihre Einwilligung jederzeit widerrufen, indem Sie den localStorage Ihres Browsers l\u00F6schen.",
 
     // Section 7
     "legal.privacy.s7.title": "7. Ihre Rechte als betroffene Person",
@@ -1026,6 +1030,10 @@ const TRANSLATIONS = {
     "legal.privacy.s5.fonts.text1": "This site uses so-called Google Fonts provided by Google for the uniform display of fonts. When you access a page, your browser loads the required fonts directly from Google servers (fonts.googleapis.com and fonts.gstatic.com). Your IP address is transmitted to Google servers in the process.",
     "legal.privacy.s5.fonts.text2": "The use of Google Fonts is based on Art. 6(1)(f) GDPR. The website operator has a legitimate interest in the uniform presentation of the typeface on their website.",
     "legal.privacy.s5.fonts.text3": "Further information about Google Fonts can be found in Google's privacy policy:",
+    "legal.privacy.s5.analytics.title": "Google Analytics",
+    "legal.privacy.s5.analytics.text1": "This website uses Google Analytics, a web analytics service provided by Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Ireland. Google Analytics uses cookies that enable analysis of your use of the website. The information generated by the cookie about your use of this website is usually transferred to a Google server in the USA and stored there. We have activated IP anonymization, so your IP address is truncated by Google within the EU.",
+    "legal.privacy.s5.analytics.text2": "Google Analytics is only loaded after your explicit consent (Art. 6(1)(a) GDPR). You can revoke your consent at any time by resetting your cookie settings in your browser or deleting the localStorage entry \"cookie-consent\".",
+    "legal.privacy.s5.analytics.text3": "Further information can be found in Google's privacy policy:",
     "legal.privacy.s5.maps.title": "Google Maps",
     "legal.privacy.s5.maps.text1": "This website uses the Google Maps mapping service. The provider is Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Ireland. When the map is loaded, a connection to Google servers is established. Your IP address and possibly your location are transmitted to Google.",
     "legal.privacy.s5.maps.text2": "Google Maps is used in the interest of an appealing presentation of our online offerings and easy findability of the locations we indicate on the website. This represents a legitimate interest within the meaning of Art. 6(1)(f) GDPR.",
@@ -1039,10 +1047,10 @@ const TRANSLATIONS = {
     "legal.privacy.s5.unsplash.text3": "Further information can be found in Unsplash's privacy policy:",
 
     // Section 6
-    "legal.privacy.s6.title": "6. Cookies",
-    "legal.privacy.s6.text1": "This website does not use any tracking or analytics cookies. No cookies are used for advertising purposes.",
-    "legal.privacy.s6.text2": "To store your language preference (German/English), only the localStorage of your browser is used. This is a technically necessary function that does not transmit any personal data to our servers. The stored language preference remains exclusively on your device.",
-    "legal.privacy.s6.text3": "Since no tracking or analytics cookies are used, no cookie consent banner is required.",
+    "legal.privacy.s6.title": "6. Cookies and localStorage",
+    "legal.privacy.s6.text1": "This website uses cookies only within the scope of Google Analytics and exclusively after your explicit consent. No cookies are used for advertising purposes.",
+    "legal.privacy.s6.text2": "To store your language preference (German/English) and your cookie consent, the localStorage of your browser is used. These are technically necessary functions that do not transmit any personal data to our servers. The stored preferences remain exclusively on your device.",
+    "legal.privacy.s6.text3": "When you first visit the website, a cookie consent banner is displayed. Google Analytics cookies are only set after your consent. You can revoke your consent at any time by clearing your browser's localStorage.",
 
     // Section 7
     "legal.privacy.s7.title": "7. Your Rights as a Data Subject",

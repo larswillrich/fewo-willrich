@@ -19,6 +19,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>W</text></svg>">
 
   <script src="translations.js"></script>
+  <script src="cookie-consent.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,6 +297,11 @@
         <p data-i18n="legal.privacy.s5.fonts.text2" class="text-warm-600 leading-relaxed mb-4">Die Nutzung von Google Fonts erfolgt auf Grundlage von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website.</p>
         <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.fonts.text3">Weitere Informationen zu Google Fonts finden Sie in der Datenschutzerkl&auml;rung von Google:</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://policies.google.com/privacy</a></p>
 
+        <h3 id="analytics" data-i18n="legal.privacy.s5.analytics.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Google Analytics</h3>
+        <p data-i18n="legal.privacy.s5.analytics.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website erm&ouml;glichen. Die durch das Cookie erzeugten Informationen &uuml;ber Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA &uuml;bertragen und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU gek&uuml;rzt wird.</p>
+        <p data-i18n="legal.privacy.s5.analytics.text2" class="text-warm-600 leading-relaxed mb-4">Google Analytics wird nur nach Ihrer ausdr&uuml;cklichen Einwilligung geladen (Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;a DSGVO). Sie k&ouml;nnen Ihre Einwilligung jederzeit widerrufen, indem Sie Ihre Cookie-Einstellungen in Ihrem Browser zur&uuml;cksetzen oder den localStorage-Eintrag &bdquo;cookie-consent&ldquo; l&ouml;schen.</p>
+        <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.analytics.text3">Weitere Informationen finden Sie in der Datenschutzerkl&auml;rung von Google:</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://policies.google.com/privacy</a></p>
+
         <h3 data-i18n="legal.privacy.s5.maps.title" class="font-serif text-xl text-warm-600 font-semibold mb-3 mt-8">Google Maps</h3>
         <p data-i18n="legal.privacy.s5.maps.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden der Karte wird eine Verbindung zu den Servern von Google hergestellt. Dabei wird Ihre IP-Adresse und ggf. Ihr Standort an Google &uuml;bertragen.</p>
         <p data-i18n="legal.privacy.s5.maps.text2" class="text-warm-600 leading-relaxed mb-4">Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art.&thinsp;6 Abs.&thinsp;1 lit.&thinsp;f DSGVO dar.</p>
@@ -311,12 +317,12 @@
         <p class="text-warm-600 leading-relaxed mb-4"><span data-i18n="legal.privacy.s5.unsplash.text3">Weitere Informationen finden Sie in der Datenschutzerkl&auml;rung von Unsplash:</span> <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer" class="text-warm-500 hover:text-warm-400 transition-colors underline">https://unsplash.com/privacy</a></p>
       </div>
 
-      <!-- Section 6: Cookies -->
+      <!-- Section 6: Cookies und localStorage -->
       <div class="mb-14">
-        <h2 data-i18n="legal.privacy.s6.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">6. Cookies</h2>
-        <p data-i18n="legal.privacy.s6.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website verwendet keine Tracking- oder Analyse-Cookies. Es werden keine Cookies zu Werbezwecken eingesetzt.</p>
-        <p data-i18n="legal.privacy.s6.text2" class="text-warm-600 leading-relaxed mb-4">Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) wird ausschlie&szlig;lich der localStorage Ihres Browsers verwendet. Dabei handelt es sich um eine technisch notwendige Funktion, die keine personenbezogenen Daten an unsere Server &uuml;bertr&auml;gt. Die gespeicherte Sprachpr&auml;ferenz verbleibt ausschlie&szlig;lich auf Ihrem Ger&auml;t.</p>
-        <p data-i18n="legal.privacy.s6.text3" class="text-warm-600 leading-relaxed mb-4">Da keine Tracking- oder Analyse-Cookies verwendet werden, ist kein Cookie-Consent-Banner erforderlich.</p>
+        <h2 data-i18n="legal.privacy.s6.title" class="font-serif text-2xl md:text-3xl text-warm-700 font-semibold mb-6">6. Cookies und localStorage</h2>
+        <p data-i18n="legal.privacy.s6.text1" class="text-warm-600 leading-relaxed mb-4">Diese Website verwendet Cookies nur im Rahmen von Google Analytics und ausschlie&szlig;lich nach Ihrer ausdr&uuml;cklichen Einwilligung. Es werden keine Cookies zu Werbezwecken eingesetzt.</p>
+        <p data-i18n="legal.privacy.s6.text2" class="text-warm-600 leading-relaxed mb-4">Zur Speicherung Ihrer Spracheinstellung (Deutsch/Englisch) und Ihrer Cookie-Einwilligung wird der localStorage Ihres Browsers verwendet. Dabei handelt es sich um technisch notwendige Funktionen, die keine personenbezogenen Daten an unsere Server &uuml;bertragen. Die gespeicherten Pr&auml;ferenzen verbleiben ausschlie&szlig;lich auf Ihrem Ger&auml;t.</p>
+        <p data-i18n="legal.privacy.s6.text3" class="text-warm-600 leading-relaxed mb-4">Beim ersten Besuch der Website wird Ihnen ein Cookie-Consent-Banner angezeigt. Erst nach Ihrer Zustimmung werden Google Analytics Cookies gesetzt. Sie k&ouml;nnen Ihre Einwilligung jederzeit widerrufen, indem Sie den localStorage Ihres Browsers l&ouml;schen.</p>
       </div>
 
       <!-- Section 7: Ihre Rechte -->
