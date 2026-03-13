@@ -180,7 +180,7 @@ const TRANSLATIONS = {
     "footer.backToTop": "Nach oben",
 
     // Sticky CTA
-    "sticky.price": "Ab \u20AC70",
+    "sticky.price": "Ab \u20AC77",
     "sticky.perNight": "/ Nacht",
     "sticky.cta": "Jetzt anfragen",
 
@@ -717,7 +717,7 @@ const TRANSLATIONS = {
     "footer.backToTop": "Back to top",
 
     // Sticky CTA
-    "sticky.price": "From \u20AC70",
+    "sticky.price": "From \u20AC77",
     "sticky.perNight": "/ night",
     "sticky.cta": "Inquire now",
 
