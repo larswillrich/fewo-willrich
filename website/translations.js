@@ -40,6 +40,11 @@ const TRANSLATIONS = {
     "apt.label": "Unsere Ferienwohnungen",
     "apt.title": "Drei einzigartige Apartments",
     "apt.subtitle": "Jede Wohnung bietet Platz f\u00FCr bis zu 4 Personen und verbindet rustikalen Charme mit modernem Komfort.",
+    "apt.videoTour": "Video-Rundgang",
+    "apt.videoShort": "Rundgang",
+    "apt.videoWatch": "Video-Rundgang ansehen",
+    "apt.videoAll": "Alle Rundg\u00E4nge",
+    "apt.videoClose": "Video schlie\u00DFen",
 
     // Apartment 1 - Maisonette
     "apt1.label": "Apartment 1",
@@ -736,6 +741,11 @@ const TRANSLATIONS = {
     "apt.label": "Our Holiday Apartments",
     "apt.title": "Three Unique Apartments",
     "apt.subtitle": "Each apartment accommodates up to 4 guests and combines rustic charm with modern comfort.",
+    "apt.videoTour": "Video tour",
+    "apt.videoShort": "Tour",
+    "apt.videoWatch": "Watch video tour",
+    "apt.videoAll": "All tours",
+    "apt.videoClose": "Close video",
 
     // Apartment 1 - Maisonette
     "apt1.label": "Apartment 1",
