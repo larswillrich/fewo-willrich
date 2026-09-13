@@ -206,7 +206,6 @@ const TRANSLATIONS = {
     "alt.meadow": "Eifel Landschaft",
     "alt.breakfastIndoor": "Fr\u00FChst\u00FCcksbuffet im Speiseraum",
     "alt.breakfastOutdoor": "Fr\u00FChst\u00FCck im Garten",
-    "alt.video2": "Blankenheim-Reetz entdecken",
 
     // ===== ACTIVITY DETAIL PAGES (DE) =====
 
@@ -907,7 +906,6 @@ const TRANSLATIONS = {
     "alt.meadow": "Eifel landscape",
     "alt.breakfastIndoor": "Breakfast buffet in the dining room",
     "alt.breakfastOutdoor": "Breakfast in the garden",
-    "alt.video2": "Discover Blankenheim-Reetz",
 
     // ===== ACTIVITY DETAIL PAGES (EN) =====
 

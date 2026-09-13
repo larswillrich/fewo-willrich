@@ -251,8 +251,11 @@
 
     /* Video background sections */
     #hero-video-wrapper, #video2-wrapper { z-index: 1; }
-    #hero-video-wrapper iframe, #video2-wrapper iframe { pointer-events: none; }
     #hero-fallback { z-index: 0; }
+    .bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    /* Hero video fades in over the still image once it actually plays */
+    #hero-video { opacity: 0; transition: opacity 1.2s ease; }
+    #hero-video.is-playing { opacity: 1; }
 
     /* Hero overlay gradient */
     .hero-overlay {
@@ -892,16 +895,9 @@
   <section id="hero" class="relative h-screen overflow-hidden">
     <!-- Fallback image (shows while video loads) -->
     <img src="images/building.jpg" data-i18n-alt="alt.heroFallback" alt="FeWo Willrich Geb&auml;ude" class="absolute inset-0 w-full h-full object-cover loaded" id="hero-fallback" width="1600" height="792">
-    <!-- YouTube Video Background -->
+    <!-- Video Background (self-hosted, loaded by script) -->
     <div class="absolute inset-0 pointer-events-none" id="hero-video-wrapper">
-      <iframe
-        id="hero-video"
-        src="https://www.youtube.com/embed/5bwC4Dzlz2k?autoplay=1&mute=1&loop=1&playlist=5bwC4Dzlz2k&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=https://fewo-willrich.de"
-        class="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        frameborder="0"
-        title="FeWo Willrich Video"
-      ></iframe>
+      <video id="hero-video" class="bg-video" data-src="videos/hero.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
     </div>
     <div class="hero-overlay absolute inset-0 z-10"></div>
     <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-6">
@@ -1319,15 +1315,7 @@
   <section id="umgebung" class="relative h-screen overflow-hidden">
     <!-- Video Background -->
     <div class="absolute inset-0 pointer-events-none" id="video2-wrapper">
-      <iframe
-        id="video2-iframe"
-        src="https://www.youtube.com/embed/LSEtDLsk-_8?autoplay=0&mute=1&loop=1&playlist=LSEtDLsk-_8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-        class="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        frameborder="0"
-        title="Blankenheim-Reetz entdecken"
-        data-i18n-title="alt.video2"
-      ></iframe>
+      <video id="video2" class="bg-video" data-src="videos/umgebung.mp4" poster="videos/umgebung-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
     </div>
     <!-- Fallback color while loading -->
     <div class="absolute inset-0 bg-warm-800 -z-10"></div>
@@ -2065,23 +2053,26 @@
     }
     window.addEventListener('scroll', updateParallax, { passive: true });
 
-    // ---- Video 2: Autoplay when scrolled into view ----
+    // ---- Background videos: load when visible, pause when scrolled away ----
     (function() {
-      const video2 = document.getElementById('video2-iframe');
-      const section = document.getElementById('umgebung');
-      if (!video2 || !section) return;
-      let video2Started = false;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const saveData = navigator.connection && navigator.connection.saveData;
+      if (reduceMotion || saveData) return; // keep the still image / poster
 
-      const video2Observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !video2Started) {
-            video2Started = true;
-            video2.src = video2.src.replace('autoplay=0', 'autoplay=1');
-          }
-        });
-      }, { threshold: 0.2 });
-
-      video2Observer.observe(section);
+      document.querySelectorAll('video.bg-video').forEach(video => {
+        video.muted = true;
+        video.addEventListener('playing', () => video.classList.add('is-playing'), { once: true });
+        new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (!video.getAttribute('src')) video.src = video.dataset.src;
+              video.play().catch(() => {});
+            } else if (video.getAttribute('src')) {
+              video.pause();
+            }
+          });
+        }, { threshold: 0.2 }).observe(video.closest('section'));
+      });
     })();
 
     // ---- Image slider functionality ----
