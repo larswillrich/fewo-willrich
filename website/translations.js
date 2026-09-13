@@ -46,32 +46,32 @@ const TRANSLATIONS = {
     "apt.videoAll": "Alle Rundg\u00E4nge",
     "apt.videoClose": "Video schlie\u00DFen",
 
-    // Apartment 1 - Maisonette
+    // Apartment 1 - Grosses
     "apt1.label": "Apartment 1",
-    "apt1.name": "Maisonette-Apartment",
-    "apt1.description": "Unser charmantes Maisonette-Apartment erstreckt sich \u00FCber zwei gem\u00FCtliche Ebenen, verbunden durch ein Treppenhaus mit freiliegendem Bruchsteinmauerwerk. Die liebevoll eingerichteten R\u00E4ume laden zu wundersch\u00F6nen Tagen in Blankenheim-Reetz ein.",
-    "apt1.feature1": "Zwei gem\u00FCtliche Ebenen",
-    "apt1.feature2": "Bruchsteinmauerwerk im Treppenhaus",
-    "apt1.feature3": "Kochzeile mit Essbereich",
-    "apt1.feature4": "Flat-TV, WLAN, Dusche/WC",
+    "apt1.name": "Gro\u00DFes Apartment",
+    "apt1.description": "Unser ger\u00E4umigstes Apartment bietet Platz f\u00FCr bis zu 4 Personen. Im oberen Stockwerk befinden sich 2 Einzelbetten unter der Dachschr\u00E4ge sowie ein Schlafsofa im Wohnbereich mit Balkon. \u00DCber die Holztreppe gelangen Sie in die separate K\u00FCche mit Essbereich im Erdgeschoss \u2014 ideal f\u00FCr Familien.",
+    "apt1.feature1": "Separate K\u00FCche mit Essbereich",
+    "apt1.feature2": "2 Einzelbetten + Schlafsofa",
+    "apt1.feature3": "Holzbalkendecke & Balkon",
+    "apt1.feature4": "Flat-TV, WLAN, Waschmaschine",
 
-    // Apartment 2 - Studio
+    // Apartment 2 - Maisonette
     "apt2.label": "Apartment 2",
-    "apt2.name": "Studio-Apartment",
-    "apt2.description": "Das Studio-Apartment besticht durch sein freiliegendes Natursteinmauerwerk und den gem\u00FCtlichen Kaminofen. Es bietet 2 Einzelbetten, ein Schlafsofa, eine Kochzeile sowie einen sonnigen Balkon mit Blick ins Gr\u00FCne.",
-    "apt2.feature1": "Originales Natursteinmauerwerk",
-    "apt2.feature2": "2 Einzelbetten + Schlafsofa",
-    "apt2.feature3": "Kaminofen & Kochzeile",
-    "apt2.feature4": "Sonniger Balkon",
+    "apt2.name": "Maisonette-Apartment",
+    "apt2.description": "Unser charmantes Maisonette-Apartment erstreckt sich \u00FCber zwei gem\u00FCtliche Ebenen, verbunden durch ein Treppenhaus mit freiliegendem Bruchsteinmauerwerk. Die liebevoll eingerichteten R\u00E4ume laden zu wundersch\u00F6nen Tagen in Blankenheim-Reetz ein.",
+    "apt2.feature1": "Zwei gem\u00FCtliche Ebenen",
+    "apt2.feature2": "Bruchsteinmauerwerk im Treppenhaus",
+    "apt2.feature3": "Kochzeile mit Essbereich",
+    "apt2.feature4": "Flat-TV, WLAN, Dusche/WC",
 
-    // Apartment 3 - Grosses
+    // Apartment 3 - Studio
     "apt3.label": "Apartment 3",
-    "apt3.name": "Gro\u00DFes Apartment",
-    "apt3.description": "Unser ger\u00E4umigstes Apartment bietet Platz f\u00FCr bis zu 4 Personen. Im oberen Stockwerk befinden sich 2 Einzelbetten unter der Dachschr\u00E4ge sowie ein Schlafsofa im Wohnbereich mit Balkon. \u00DCber die Holztreppe gelangen Sie in die separate K\u00FCche mit Essbereich im Erdgeschoss \u2014 ideal f\u00FCr Familien.",
-    "apt3.feature1": "Separate K\u00FCche mit Essbereich",
+    "apt3.name": "Studio-Apartment",
+    "apt3.description": "Das Studio-Apartment besticht durch sein freiliegendes Natursteinmauerwerk und den gem\u00FCtlichen Kaminofen. Es bietet 2 Einzelbetten, ein Schlafsofa, eine Kochzeile sowie einen sonnigen Balkon mit Blick ins Gr\u00FCne.",
+    "apt3.feature1": "Originales Natursteinmauerwerk",
     "apt3.feature2": "2 Einzelbetten + Schlafsofa",
-    "apt3.feature3": "Holzbalkendecke & Balkon",
-    "apt3.feature4": "Flat-TV, WLAN, Waschmaschine",
+    "apt3.feature3": "Kaminofen & Kochzeile",
+    "apt3.feature4": "Sonniger Balkon",
 
     // Amenities
     "amenities.title": "In allen Apartments inklusive",
@@ -746,32 +746,32 @@ const TRANSLATIONS = {
     "apt.videoAll": "All tours",
     "apt.videoClose": "Close video",
 
-    // Apartment 1 - Maisonette
+    // Apartment 1 - Grosses
     "apt1.label": "Apartment 1",
-    "apt1.name": "Maisonette Apartment",
-    "apt1.description": "Our charming maisonette apartment spans two cozy levels, connected by a staircase with exposed stone walls. The lovingly furnished rooms invite you to enjoy wonderful days in Blankenheim-Reetz.",
-    "apt1.feature1": "Two cozy levels",
-    "apt1.feature2": "Exposed stone walls in staircase",
-    "apt1.feature3": "Kitchenette with dining area",
-    "apt1.feature4": "Flat-screen TV, WiFi, shower/WC",
+    "apt1.name": "Large Apartment",
+    "apt1.description": "Our most spacious apartment accommodates up to 4 guests. The upper floor features 2 single beds under the sloped roof and a sofa bed in the living area with balcony. A wooden staircase leads to the separate kitchen with dining area on the ground floor \u2014 ideal for families.",
+    "apt1.feature1": "Separate kitchen with dining area",
+    "apt1.feature2": "2 single beds + sofa bed",
+    "apt1.feature3": "Wooden beam ceiling & balcony",
+    "apt1.feature4": "Flat-screen TV, WiFi, washing machine",
 
-    // Apartment 2 - Studio
+    // Apartment 2 - Maisonette
     "apt2.label": "Apartment 2",
-    "apt2.name": "Studio Apartment",
-    "apt2.description": "The studio apartment impresses with its exposed natural stone walls and cozy fireplace. It offers 2 single beds, a sofa bed, a kitchenette, and a sunny balcony with views of the countryside.",
-    "apt2.feature1": "Original natural stone walls",
-    "apt2.feature2": "2 single beds + sofa bed",
-    "apt2.feature3": "Fireplace & kitchenette",
-    "apt2.feature4": "Sunny balcony",
+    "apt2.name": "Maisonette Apartment",
+    "apt2.description": "Our charming maisonette apartment spans two cozy levels, connected by a staircase with exposed stone walls. The lovingly furnished rooms invite you to enjoy wonderful days in Blankenheim-Reetz.",
+    "apt2.feature1": "Two cozy levels",
+    "apt2.feature2": "Exposed stone walls in staircase",
+    "apt2.feature3": "Kitchenette with dining area",
+    "apt2.feature4": "Flat-screen TV, WiFi, shower/WC",
 
-    // Apartment 3 - Grosses
+    // Apartment 3 - Studio
     "apt3.label": "Apartment 3",
-    "apt3.name": "Large Apartment",
-    "apt3.description": "Our most spacious apartment accommodates up to 4 guests. The upper floor features 2 single beds under the sloped roof and a sofa bed in the living area with balcony. A wooden staircase leads to the separate kitchen with dining area on the ground floor \u2014 ideal for families.",
-    "apt3.feature1": "Separate kitchen with dining area",
+    "apt3.name": "Studio Apartment",
+    "apt3.description": "The studio apartment impresses with its exposed natural stone walls and cozy fireplace. It offers 2 single beds, a sofa bed, a kitchenette, and a sunny balcony with views of the countryside.",
+    "apt3.feature1": "Original natural stone walls",
     "apt3.feature2": "2 single beds + sofa bed",
-    "apt3.feature3": "Wooden beam ceiling & balcony",
-    "apt3.feature4": "Flat-screen TV, WiFi, washing machine",
+    "apt3.feature3": "Fireplace & kitchenette",
+    "apt3.feature4": "Sunny balcony",
 
     // Amenities
     "amenities.title": "Included in all apartments",
