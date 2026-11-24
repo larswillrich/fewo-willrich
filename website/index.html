@@ -792,6 +792,22 @@
       height: auto;
     }
 
+    /* Price calculator */
+    .calc-apt { padding: 0.75rem 0.5rem; border-radius: 0.75rem; border: 1px solid #E8E0D8; background: #FDFBF7; color: #5C4033; font-size: 0.85rem; font-weight: 500; line-height: 1.2; cursor: pointer; transition: all 0.25s ease; }
+    .calc-apt:hover { border-color: #C4A882; }
+    .calc-apt.is-active { background: #2C1810; border-color: #2C1810; color: #FDFBF7; }
+    .calc-input { width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid #E8E0D8; background: #FDFBF7; color: #2C1810; }
+    .calc-input:focus, .calc-apt:focus-visible, .calc-step:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; }
+    .calc-step { width: 2.75rem; height: 2.75rem; border-radius: 9999px; border: 1px solid #D4C4B0; background: #FDFBF7; color: #2C1810; font-size: 1.4rem; line-height: 1; cursor: pointer; transition: all 0.2s ease; }
+    .calc-step:hover:not(:disabled) { background: #2C1810; color: #FDFBF7; }
+    .calc-step:disabled { opacity: 0.35; cursor: not-allowed; }
+    .calc-toggle { display: flex; align-items: center; gap: 0.6rem; color: #5C4033; font-size: 0.95rem; cursor: pointer; }
+    .calc-toggle input { width: 1.15rem; height: 1.15rem; accent-color: #4A7A3D; cursor: pointer; }
+    #calcLines li { display: flex; justify-content: space-between; gap: 1rem; animation: calcIn 0.35s ease both; }
+    #calcLines li span:last-child { color: #FDFBF7; white-space: nowrap; }
+    @keyframes calcIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    #contactMessage.calc-filled { animation: calcFlash 1.6s ease; }
+    @keyframes calcFlash { 0%, 40% { box-shadow: 0 0 0 4px rgba(74,122,61,0.35); } 100% { box-shadow: 0 0 0 0 rgba(74,122,61,0); } }
   </style>
 </head>
 
@@ -1690,6 +1706,71 @@
         </div>
       </div>
 
+      <!-- Price calculator -->
+      <div id="priceCalc" class="mt-12 bg-white rounded-2xl shadow-lg overflow-hidden reveal">
+        <div class="grid lg:grid-cols-5">
+          <div class="lg:col-span-3 p-8 md:p-10 space-y-6">
+            <div>
+              <p data-i18n="calc.label" class="text-warm-400 text-sm tracking-widest-custom uppercase font-medium mb-2">Preisrechner</p>
+              <h3 data-i18n="calc.title" class="font-serif text-3xl text-warm-800 font-semibold">Was kostet Ihr Aufenthalt?</h3>
+            </div>
+
+            <div>
+              <span data-i18n="calc.apartment" class="block text-warm-700 font-medium mb-2 text-sm">Wunschwohnung</span>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" role="radiogroup" id="calcApts">
+                <button type="button" class="calc-apt is-active" data-apt="any" role="radio" aria-checked="true" data-i18n="calc.anyApt">Egal</button>
+                <button type="button" class="calc-apt" data-apt="apt1" role="radio" aria-checked="false" data-i18n="apt1.name">Gro&szlig;es Apartment</button>
+                <button type="button" class="calc-apt" data-apt="apt2" role="radio" aria-checked="false" data-i18n="apt2.name">Maisonette-Apartment</button>
+                <button type="button" class="calc-apt" data-apt="apt3" role="radio" aria-checked="false" data-i18n="apt3.name">Studio-Apartment</button>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calcFrom" data-i18n="calc.arrival" class="block text-warm-700 font-medium mb-2 text-sm">Anreise</label>
+                <input type="date" id="calcFrom" class="calc-input">
+              </div>
+              <div>
+                <label for="calcTo" data-i18n="calc.departure" class="block text-warm-700 font-medium mb-2 text-sm">Abreise</label>
+                <input type="date" id="calcTo" class="calc-input">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 items-end">
+              <div>
+                <span id="calcGuestsLabel" data-i18n="calc.guests" class="block text-warm-700 font-medium mb-2 text-sm">Personen</span>
+                <div class="flex items-center gap-3" role="group" aria-labelledby="calcGuestsLabel">
+                  <button type="button" class="calc-step" id="calcMinus" aria-label="&minus;">&minus;</button>
+                  <output id="calcGuests" class="font-serif text-3xl text-warm-800 font-semibold w-10 text-center" aria-live="polite">2</output>
+                  <button type="button" class="calc-step" id="calcPlus" aria-label="+">+</button>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <label class="calc-toggle"><input type="checkbox" id="calcPets"><span data-i18n="calc.pets">Mit Haustier</span></label>
+                <label class="calc-toggle"><input type="checkbox" id="calcBreakfast"><span data-i18n="calc.breakfast">Mit Fr&uuml;hst&uuml;ck</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 bg-warm-800 text-warm-100 p-8 md:p-10 flex flex-col">
+            <p data-i18n="calc.summary" class="text-warm-400 text-sm tracking-widest-custom uppercase font-medium mb-4">Ihre Sch&auml;tzung</p>
+            <ul id="calcLines" class="space-y-3 text-sm flex-1"></ul>
+            <div class="border-t border-white/20 mt-6 pt-6">
+              <div class="flex items-baseline justify-between gap-4">
+                <span data-i18n="calc.total" class="text-warm-300">Gesamt</span>
+                <span id="calcTotal" class="font-serif text-5xl text-white font-bold" aria-live="polite">&ndash;</span>
+              </div>
+              <p data-i18n="calc.note" class="text-warm-400 text-xs mt-3 leading-relaxed">Unverbindliche Sch&auml;tzung. Den genauen Preis und die Verf&uuml;gbarkeit best&auml;tigen wir Ihnen pers&ouml;nlich.</p>
+              <button type="button" id="calcRequest" disabled
+                class="mt-6 w-full inline-flex items-center justify-center gap-3 bg-warm-100 text-warm-800 px-6 py-4 rounded-xl font-medium hover:bg-white transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer">
+                <span data-i18n="calc.request">Mit diesen Angaben anfragen</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Trust signals -->
       <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 reveal">
         <div class="flex items-center justify-center gap-3 bg-warm-50 rounded-xl py-4 px-5">
@@ -2226,6 +2307,141 @@
           btnText.textContent = t['contact.submit'];
         }
       });
+    })();
+
+    // ---- Price Calculator ----
+    (function() {
+      const root = document.getElementById('priceCalc');
+      if (!root) return;
+      const RATE_SMALL = 77, RATE_LARGE = 90, CLEANING = 40, PET = 5, BREAKFAST = 12, MAX_GUESTS = 4;
+      const fromEl = document.getElementById('calcFrom');
+      const toEl = document.getElementById('calcTo');
+      const guestsEl = document.getElementById('calcGuests');
+      const minus = document.getElementById('calcMinus');
+      const plus = document.getElementById('calcPlus');
+      const pets = document.getElementById('calcPets');
+      const breakfast = document.getElementById('calcBreakfast');
+      const lines = document.getElementById('calcLines');
+      const totalEl = document.getElementById('calcTotal');
+      const requestBtn = document.getElementById('calcRequest');
+      let guests = 2, apt = 'any', shownTotal = 0;
+
+      const tr = key => (TRANSLATIONS[document.documentElement.lang || 'de'] || TRANSLATIONS.de)[key] || key;
+      const trn = (key, n) => tr(n === 1 ? key + '1' : key);
+      const lang = () => document.documentElement.lang === 'en' ? 'en-GB' : 'de-DE';
+      const eur = n => new Intl.NumberFormat(lang(), { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+      const iso = d => d.toISOString().slice(0, 10);
+      const parse = v => v ? new Date(v + 'T00:00:00Z') : null;
+      const fmtDate = d => new Intl.DateTimeFormat(lang(), { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' }).format(d);
+
+      const today = new Date(Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()));
+      fromEl.min = iso(today);
+
+      function nights() {
+        const a = parse(fromEl.value), b = parse(toEl.value);
+        if (!a || !b) return 0;
+        return Math.max(0, Math.round((b - a) / 86400000));
+      }
+
+      function quote() {
+        const n = nights();
+        if (!n) return null;
+        const rate = guests <= 2 ? RATE_SMALL : RATE_LARGE;
+        const items = [[trn('calc.lineStay', n).replace('{n}', n).replace('{rate}', eur(rate)), n * rate]];
+        if (breakfast.checked) items.push([trn('calc.lineBreakfast', n).replace('{g}', guests).replace('{n}', n), guests * n * BREAKFAST]);
+        if (pets.checked) items.push([trn('calc.linePets', n).replace('{n}', n), n * PET]);
+        items.push([tr('pricing.cleaning'), CLEANING]);
+        return { n, items, total: items.reduce((s, i) => s + i[1], 0) };
+      }
+
+      function animateTotal(target) {
+        const start = shownTotal, t0 = performance.now();
+        const step = now => {
+          const p = Math.min(1, (now - t0) / 450);
+          const v = Math.round(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+          totalEl.textContent = eur(v);
+          if (p < 1) requestAnimationFrame(step); else shownTotal = target;
+        };
+        requestAnimationFrame(step);
+      }
+
+      function render() {
+        guestsEl.textContent = guests;
+        minus.disabled = guests <= 1;
+        plus.disabled = guests >= MAX_GUESTS;
+        const q = quote();
+        lines.innerHTML = '';
+        if (!q) {
+          const li = document.createElement('li');
+          li.className = 'text-warm-400';
+          li.textContent = tr('calc.pickDates');
+          lines.appendChild(li);
+          totalEl.textContent = '–';
+          shownTotal = 0;
+          requestBtn.disabled = true;
+          return;
+        }
+        q.items.forEach(([label, amount]) => {
+          const li = document.createElement('li');
+          const l = document.createElement('span'); l.className = 'text-warm-300'; l.textContent = label;
+          const r = document.createElement('span'); r.textContent = eur(amount);
+          li.append(l, r);
+          lines.appendChild(li);
+        });
+        requestBtn.disabled = false;
+        animateTotal(q.total);
+      }
+
+      fromEl.addEventListener('change', () => {
+        const a = parse(fromEl.value);
+        if (a) {
+          const minTo = new Date(a.getTime() + 86400000);
+          toEl.min = iso(minTo);
+          const b = parse(toEl.value);
+          if (!b || b <= a) toEl.value = iso(new Date(a.getTime() + 3 * 86400000));
+        }
+        render();
+      });
+      toEl.addEventListener('change', render);
+      minus.addEventListener('click', () => { if (guests > 1) { guests--; render(); } });
+      plus.addEventListener('click', () => { if (guests < MAX_GUESTS) { guests++; render(); } });
+      pets.addEventListener('change', render);
+      breakfast.addEventListener('change', render);
+      root.querySelectorAll('.calc-apt').forEach(btn => btn.addEventListener('click', () => {
+        apt = btn.dataset.apt;
+        root.querySelectorAll('.calc-apt').forEach(b => {
+          b.classList.toggle('is-active', b === btn);
+          b.setAttribute('aria-checked', b === btn ? 'true' : 'false');
+        });
+      }));
+
+      requestBtn.addEventListener('click', () => {
+        const q = quote();
+        if (!q) return;
+        const aptName = apt === 'any' ? tr('calc.anyAptLong') : tr(apt + '.name');
+        const msg = [
+          tr('calc.msgIntro'),
+          '',
+          tr('calc.apartment') + ': ' + aptName,
+          tr('calc.arrival') + ': ' + fmtDate(parse(fromEl.value)),
+          tr('calc.departure') + ': ' + fmtDate(parse(toEl.value)) + ' (' + trn('calc.nights', q.n).replace('{n}', q.n) + ')',
+          tr('calc.guests') + ': ' + guests,
+          tr('calc.pets') + ': ' + (pets.checked ? tr('calc.yes') : tr('calc.no')),
+          tr('calc.breakfast') + ': ' + (breakfast.checked ? tr('calc.yes') : tr('calc.no')),
+          tr('calc.msgEstimate') + ': ' + eur(q.total),
+        ].join('\n');
+        const box = document.getElementById('contactMessage');
+        box.value = msg;
+        box.classList.remove('calc-filled'); void box.offsetWidth; box.classList.add('calc-filled');
+        const form = document.getElementById('contactForm');
+        const top = form.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: 'smooth' });
+        setTimeout(() => document.getElementById('contactName').focus({ preventScroll: true }), 700);
+      });
+
+      // Re-render texts and currency format when the language is switched
+      new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+      render();
     })();
 
     // ---- Category Filter for Activities ----
